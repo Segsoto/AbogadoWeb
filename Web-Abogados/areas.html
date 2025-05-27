@@ -8,69 +8,21 @@
     <!-- Font Awesome para los íconos -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        .areas-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 32px;
-            margin-top: 32px;
-        }
-        .area-card {
-            background: linear-gradient(135deg, #1a2236 80%, #2e3a59 100%);
-            border-radius: 16px;
-            box-shadow: 0 4px 24px rgba(0,0,0,0.08);
-            padding: 28px 22px 22px 22px;
-            color: #fff;
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            min-height: 320px;
-            position: relative;
-            overflow: hidden;
-        }
-        .area-card .icon {
-            font-size: 2.8em;
-            margin-bottom: 18px;
-            color: #fff;
-            background: rgba(255,255,255,0.08);
-            border-radius: 12px;
-            padding: 14px;
-            display: inline-block;
-        }
-        .area-card h3 {
-            font-size: 1.25em;
-            font-weight: 700;
-            margin-bottom: 10px;
-            color: #fff;
-        }
-        .area-card p {
-            font-size: 1em;
-            color: #eaf2fb;
-            margin-bottom: 0;
-        }
-        .area-card a {
-            color: #4ec3fa;
-            text-decoration: underline;
-            font-size: 0.98em;
-            margin-top: 8px;
-            display: inline-block;
-        }
-        @media (max-width: 800px) {
-            .areas-grid {
-                grid-template-columns: 1fr;
-            }
-        }
+
     </style>
 </head>
 <body>
-    <input type="checkbox" id="menu-toggle" class="menu-toggle" />
-    <label for="menu-toggle" class="menu-icon">&#9776; Menú</label>
-    <nav class="side-menu">
-        <a href="index.html">Inicio</a>
-        <a href="quien-soy.html">Quién Soy</a>
-        <a href="areas.html" class="active">Áreas</a>
-        <a href="contacto.html">Contacto</a>
-        <a href="ubicaciones.html">Ubicaciones</a>
-    </nav>
+    <header class="topbar">
+        <div class="topbar-content">
+            <span class="topbar-logo">Abogados San Rafael / Abogados La Guacima</span>
+            <nav class="main-menu main-menu-lineal">
+                <a href="index.html">Inicio</a>
+                <a href="quien-soy.html">Quién Soy</a>
+                <a href="contacto.html">Contacto</a>
+                <a href="ubicaciones.html">Ubicaciones</a>
+            </nav>
+        </div>
+    </header>
 
     <main class="main-welcome" style="min-height: 80vh; display: flex; align-items: flex-start; justify-content: center;">
         <div class="welcome-content" style="background: #fff; border-radius: 18px; box-shadow: 0 4px 24px rgba(0,0,0,0.08); padding: 40px 30px; max-width: 1100px; width: 100%;">
