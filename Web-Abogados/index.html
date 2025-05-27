@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sergio Madriz Avendaño - Abogado</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Menú principal lineal solo para el index */
+        .main-menu-lineal {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 0;
+            margin-top: 36px;
+            border-radius: 8px;
+            overflow: hidden;
+            background: #fff;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+        }
+        .main-menu-lineal a {
+            color: #1a2236;
+            background: none;
+            padding: 18px 38px;
+            border-right: 1px solid #e0e6ef;
+            font-size: 1.15em;
+            font-weight: 600;
+            text-decoration: none;
+            transition: background 0.2s, color 0.2s;
+            box-shadow: none;
+            border-radius: 0;
+            letter-spacing: 0.5px;
+        }
+        .main-menu-lineal a:last-child {
+            border-right: none;
+        }
+        .main-menu-lineal a:hover {
+            background: #eaf2fb;
+            color: #00509e;
+        }
+        /* Oculta el menú lateral solo en el index */
+        .side-menu, .menu-icon, #menu-toggle {
+            display: none !important;
+        }
+    </style>
+</head>
+<body>
+    <main class="main-welcome">
+        <div class="welcome-content">
+            <h1 style="font-size:3em; font-weight:900; color:#1a2236; margin-bottom:18px;">
+                Bienvenido a mi despacho jurídico
+            </h1>
+            <h2 style="font-size:1.7em; color:#2e3a59; font-weight:600; margin-bottom:28px;">
+                Sergio Madriz Avendaño<br>Abogado & Notario
+            </h2>
+            <p class="welcome-text" style="font-size:1.3em; color:#444; line-height:1.7; max-width:600px; margin:0 auto;">
+                Asesoría legal confiable, ética y profesional.<br>
+                Soluciones jurídicas personalizadas, defendiendo siempre sus derechos e intereses con integridad y excelencia.
+            </p>
+            <nav class="main-menu main-menu-lineal">
+                <a href="quien-soy.html">Quién Soy</a>
+                <a href="areas.html">Áreas</a>
+                <a href="contacto.html">Contacto</a>
+                <a href="ubicaciones.html">Ubicaciones</a>
+            </nav>
+        </div>
+    </main>
+    <!-- ...después del menú principal... -->
+<section class="blog-section">
+    <h2 class="blog-title">Testimonios de nuestros clientes</h2>
+    <div class="blog-grid">
+        <div class="blog-card">
+            <div class="blog-img" style="background-image:url('testimonio1.jpg'); background-size:cover; background-position:center;"></div>
+            <div class="blog-content">
+                <h3>Excelente servicio y atención</h3>
+                <p class="blog-meta">por María Rodríguez | Feb 2024</p>
+                <p>
+                    “Sergio me ayudó a resolver un proceso legal complicado con mucha dedicación y profesionalismo. Lo recomiendo totalmente.”
+                </p>
+            </div>
+        </div>
+        <div class="blog-card">
+            <div class="blog-img" style="background-image:url('testimonio2.jpg'); background-size:cover; background-position:center; filter: grayscale(1);"></div>
+            <div class="blog-content">
+                <h3>Confianza y resultados</h3>
+                <p class="blog-meta">por Carlos Jiménez | Dic 2023</p>
+                <p>
+                    “Desde el primer contacto sentí confianza. El acompañamiento fue personalizado y siempre estuvo atento a mis dudas.”
+                </p>
+            </div>
+        </div>
+        <div class="blog-card">
+            <div class="blog-img" style="background-image:url('testimonio3.jpg'); background-size:cover; background-position:center; filter: grayscale(1);"></div>
+            <div class="blog-content">
+                <h3>Recomendado para trámites notariales</h3>
+                <p class="blog-meta">por Ana Vargas | Oct 2023</p>
+                <p>
+                    “Me apoyó con trámites notariales de forma rápida y clara. Muy profesional y amable en todo momento.”
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Sergio Madriz Avendaño - Todos los derechos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>
