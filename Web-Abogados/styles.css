@@ -395,3 +395,106 @@ footer {
     margin-bottom: 10px;
     font-weight: 600;
 }
+.topbar {
+    width: 100%;
+    background: linear-gradient(90deg, #1a2236 60%, #4ec3fa 100%);
+    color: #fff;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+    padding: 0;
+    position: relative;
+    z-index: 2000;
+}
+.topbar-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 18px 32px 14px 32px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.topbar-logo {
+    font-size: 1.35em;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+.topbar-desc {
+    font-size: 1.1em;
+    font-weight: 500;
+    opacity: 0.85;
+    letter-spacing: 0.5px;
+}
+@media (max-width: 700px) {
+    .topbar-content {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 4px;
+        padding: 14px 10px 10px 10px;
+    }
+    .topbar-logo {
+        font-size: 1.1em;
+    }
+    .topbar-desc {
+        font-size: 0.98em;
+    }
+}
+ .topbar {
+            width: 100%;
+            background: linear-gradient(90deg, #1a2236 60%, #4ec3fa 100%);
+            color: #fff;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+            position: relative;
+            z-index: 2000;
+        }
+        .topbar-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 18px 32px 14px 32px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+        .topbar-logo {
+            font-size: 1.5em;
+            font-weight: 800;
+            letter-spacing: 1px;
+            margin-bottom: 2px;
+        }
+        .main-menu-lineal {
+            display: flex;
+            gap: 0;
+            border-radius: 8px;
+            overflow: hidden;
+            background: transparent;
+            box-shadow: none;
+            justify-content: center;
+        }
+        .main-menu-lineal a {
+            color: #fff;
+            background: none;
+            padding: 12px 28px;
+            border-right: 1px solid rgba(255,255,255,0.18);
+            font-size: 1.08em;
+            font-weight: 600;
+            text-decoration: none;
+            transition: background 0.2s, color 0.2s;
+            border-radius: 0;
+            letter-spacing: 0.5px;
+        }
+        .main-menu-lineal a:last-child {
+            border-right: none;
+        }
+        .main-menu-lineal a:hover {
+            background: rgba(255,255,255,0.10);
+            color: #4ec3fa;
+        }
+        @media (max-width: 900px) {
+            .topbar-content {
+                padding: 14px 10px 10px 10px;
+            }
+            .main-menu-lineal a {
+                padding: 10px 14px;
+                font-size: 1em;
+            }
+        }

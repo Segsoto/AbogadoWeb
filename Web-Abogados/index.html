@@ -6,45 +6,26 @@
     <title>Sergio Madriz Avendaño - Abogado</title>
     <link rel="stylesheet" href="styles.css">
     <style>
-        /* Menú principal lineal solo para el index */
-        .main-menu-lineal {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 0;
-            margin-top: 36px;
-            border-radius: 8px;
-            overflow: hidden;
-            background: #fff;
-            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
-        }
-        .main-menu-lineal a {
-            color: #1a2236;
-            background: none;
-            padding: 18px 38px;
-            border-right: 1px solid #e0e6ef;
-            font-size: 1.15em;
-            font-weight: 600;
-            text-decoration: none;
-            transition: background 0.2s, color 0.2s;
-            box-shadow: none;
-            border-radius: 0;
-            letter-spacing: 0.5px;
-        }
-        .main-menu-lineal a:last-child {
-            border-right: none;
-        }
-        .main-menu-lineal a:hover {
-            background: #eaf2fb;
-            color: #00509e;
-        }
-        /* Oculta el menú lateral solo en el index */
+       
+    </style>
+    <style>
         .side-menu, .menu-icon, #menu-toggle {
             display: none !important;
         }
     </style>
 </head>
 <body>
+    <header class="topbar">
+        <div class="topbar-content">
+            <span class="topbar-logo">Sergio Madriz Avendaño</span>
+            <nav class="main-menu main-menu-lineal">
+                <a href="quien-soy.html">Quién Soy</a>
+                <a href="areas.html">Áreas</a>
+                <a href="contacto.html">Contacto</a>
+                <a href="ubicaciones.html">Ubicaciones</a>
+            </nav>
+        </div>
+    </header>
     <main class="main-welcome">
         <div class="welcome-content">
             <h1 style="font-size:3em; font-weight:900; color:#1a2236; margin-bottom:18px;">
@@ -57,12 +38,6 @@
                 Asesoría legal confiable, ética y profesional.<br>
                 Soluciones jurídicas personalizadas, defendiendo siempre sus derechos e intereses con integridad y excelencia.
             </p>
-            <nav class="main-menu main-menu-lineal">
-                <a href="quien-soy.html">Quién Soy</a>
-                <a href="areas.html">Áreas</a>
-                <a href="contacto.html">Contacto</a>
-                <a href="ubicaciones.html">Ubicaciones</a>
-            </nav>
         </div>
     </main>
     <!-- ...después del menú principal... -->
