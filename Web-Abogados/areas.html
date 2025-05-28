@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -14,10 +15,11 @@
             gap: 32px;
             margin-top: 32px;
         }
+
         .area-card {
             background: linear-gradient(135deg, #1a2236 80%, #2e3a59 100%);
             border-radius: 16px;
-            box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+            box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
             padding: 28px 22px 22px 22px;
             color: #fff;
             display: flex;
@@ -27,26 +29,30 @@
             position: relative;
             overflow: hidden;
         }
+
         .area-card .icon {
             font-size: 2.8em;
             margin-bottom: 18px;
             color: #fff;
-            background: rgba(255,255,255,0.08);
+            background: rgba(255, 255, 255, 0.08);
             border-radius: 12px;
             padding: 14px;
             display: inline-block;
         }
+
         .area-card h3 {
             font-size: 1.25em;
             font-weight: 700;
             margin-bottom: 10px;
             color: #fff;
         }
+
         .area-card p {
             font-size: 1em;
             color: #eaf2fb;
             margin-bottom: 0;
         }
+
         .area-card a {
             color: #4ec3fa;
             text-decoration: underline;
@@ -54,62 +60,126 @@
             margin-top: 8px;
             display: inline-block;
         }
+
         @media (max-width: 800px) {
             .areas-grid {
                 grid-template-columns: 1fr;
             }
         }
+
+        /* Puedes agregar estilos para el header aquí si lo deseas */
+        .topbar {
+            background: #1a2236;
+            color: #fff;
+            padding: 14px 0;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+        }
+
+        .topbar-content {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 30px;
+        }
+
+        .topbar-logo {
+            font-weight: bold;
+            font-size: 1.2em;
+            letter-spacing: 1px;
+        }
+
+        .main-menu-lineal a {
+            color: #fff;
+            text-decoration: none;
+            margin-left: 18px;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        .main-menu-lineal a:hover,
+        .main-menu-lineal a.active {
+            color: #4ec3fa;
+        }
+
+        @media (max-width: 600px) {
+            .topbar-content {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 10px;
+            }
+
+            .main-menu-lineal a {
+                margin-left: 0;
+                margin-right: 14px;
+            }
+        }
     </style>
 </head>
-<body>
-    <input type="checkbox" id="menu-toggle" class="menu-toggle" />
-    <label for="menu-toggle" class="menu-icon">&#9776; Menú</label>
-    <nav class="side-menu">
-        <a href="index.html">Inicio</a>
-        <a href="quien-soy.html">Quién Soy</a>
-        <a href="areas.html" class="active">Áreas</a>
-        <a href="contacto.html">Contacto</a>
-        <a href="ubicaciones.html">Ubicaciones</a>
-    </nav>
 
-    <main class="main-welcome" style="min-height: 80vh; display: flex; align-items: flex-start; justify-content: center;">
-        <div class="welcome-content" style="background: #fff; border-radius: 18px; box-shadow: 0 4px 24px rgba(0,0,0,0.08); padding: 40px 30px; max-width: 1100px; width: 100%;">
-            <h1 style="font-size:2.2em; color:#1a2236; font-weight:800; margin-bottom:10px; text-align:center;">Principales áreas de práctica</h1>
+<body>
+    <!-- Header de navegación superior -->
+    <header class="topbar">
+        <div class="topbar-content">
+            <span class="topbar-logo">Sergio Madriz Avendaño</span>
+            <nav class="main-menu main-menu-lineal">
+                <a href="index.html">Inicio</a>
+                <a href="quien-soy.html">Quién Soy</a>
+                <a href="areas.html" class="active">Áreas</a>
+                <a href="contacto.html">Contacto</a>
+                <a href="ubicaciones.html">Ubicaciones</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-welcome"
+        style="min-height: 80vh; display: flex; align-items: flex-start; justify-content: center;">
+        <div class="welcome-content"
+            style="background: #fff; border-radius: 18px; box-shadow: 0 4px 24px rgba(0,0,0,0.08); padding: 40px 30px; max-width: 1100px; width: 100%;">
+            <h1 style="font-size:2.2em; color:#1a2236; font-weight:800; margin-bottom:10px; text-align:center;">
+                Principales áreas de práctica</h1>
             <div class="areas-grid">
                 <div class="area-card">
                     <span class="icon"><i class="fas fa-building"></i></span>
                     <h3>Empresarial</h3>
-                    <p>Brindamos servicios legales para el campo empresarial enfocados en Derecho Corporativo, Sociedades, Marcas y Permisos.</p>
+                    <p>Brindamos servicios legales para el campo empresarial enfocados en Derecho Corporativo,
+                        Sociedades, Marcas y Permisos.</p>
                     <a href="#">Leer más</a>
                 </div>
                 <div class="area-card">
                     <span class="icon"><i class="fas fa-briefcase"></i></span>
                     <h3>Laboral</h3>
-                    <p>Asesoría en derechos y obligaciones laborales, contratos, despidos y representación ante conflictos laborales.</p>
+                    <p>Asesoría en derechos y obligaciones laborales, contratos, despidos y representación ante
+                        conflictos laborales.</p>
                     <a href="#">Leer más</a>
                 </div>
                 <div class="area-card">
                     <span class="icon"><i class="fas fa-globe"></i></span>
                     <h3>Migración</h3>
-                    <p>Trámites de visas, permisos de residencia, naturalización y asesoría para extranjeros en Costa Rica.</p>
+                    <p>Trámites de visas, permisos de residencia, naturalización y asesoría para extranjeros en Costa
+                        Rica.</p>
                     <a href="#">Leer más</a>
                 </div>
                 <div class="area-card">
                     <span class="icon"><i class="fas fa-briefcase-medical"></i></span>
                     <h3>Negocios</h3>
-                    <p>Asesoría legal para inversiones, instalación de empresas y cumplimiento normativo en Costa Rica.</p>
+                    <p>Asesoría legal para inversiones, instalación de empresas y cumplimiento normativo en Costa Rica.
+                    </p>
                     <a href="#">Leer más</a>
                 </div>
                 <div class="area-card">
                     <span class="icon"><i class="fas fa-gavel"></i></span>
                     <h3>Litigio</h3>
-                    <p>Representación en procesos judiciales, resolución de conflictos y litigios civiles, penales y administrativos.</p>
+                    <p>Representación en procesos judiciales, resolución de conflictos y litigios civiles, penales y
+                        administrativos.</p>
                     <a href="#">Leer más</a>
                 </div>
                 <div class="area-card">
                     <span class="icon"><i class="fas fa-users"></i></span>
                     <h3>Familia</h3>
-                    <p>Divorcios, custodia, pensión alimentaria, adopciones y planificación patrimonial, protegiendo sus derechos.</p>
+                    <p>Divorcios, custodia, pensión alimentaria, adopciones y planificación patrimonial, protegiendo sus
+                        derechos.</p>
                     <a href="#">Leer más</a>
                 </div>
             </div>
@@ -122,4 +192,5 @@
         </div>
     </footer>
 </body>
+
 </html>
