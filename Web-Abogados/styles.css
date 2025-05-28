@@ -498,3 +498,189 @@ footer {
                 font-size: 1em;
             }
         }
+            .areas-section {
+        background: #f5f8fc;
+        padding: 40px 0 30px 0;
+        margin-bottom: 30px;
+    }
+    .areas-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        max-width: 1100px;
+        margin: 0 auto 30px auto;
+        padding: 0 20px;
+    }
+    .areas-title {
+        font-size: 2.3em;
+        font-family: 'Georgia', serif;
+        font-weight: 800;
+        color: #1a2236;
+        margin: 0;
+        letter-spacing: 1px;
+    }
+    .areas-btn {
+        background: #18aee4;
+        color: #fff;
+        font-weight: 600;
+        padding: 10px 28px;
+        border-radius: 4px;
+        text-decoration: none;
+        font-size: 1.1em;
+        transition: background 0.2s;
+        border: none;
+        cursor: pointer;
+    }
+    .areas-btn:hover {
+        background: #0e8cc1;
+    }
+    .areas-carrusel {
+        display: flex;
+        gap: 28px;
+        max-width: 1100px;
+        margin: 0 auto;
+        overflow-x: auto;
+        padding: 0 20px;
+    }
+    .area-card {
+        background: #0d1a2b;
+        border-radius: 0 0 0 0;
+        box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+        min-width: 260px;
+        max-width: 300px;
+        flex: 1 0 260px;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 0;
+    }
+    .area-img {
+        height: 160px;
+        background-size: cover;
+        background-position: center;
+        border-radius: 0;
+    }
+    .area-info {
+        padding: 22px 18px 18px 18px;
+        background: #0d1a2b;
+        border-radius: 0 0 0 0;
+        display: flex;
+        flex-direction: column;
+        min-height: 120px;
+        justify-content: space-between;
+    }
+    .area-info h3 {
+        color: #fff;
+        font-size: 1.18em;
+        font-weight: 700;
+        margin-bottom: 12px;
+    }
+    .area-info a {
+        color: #18aee4;
+        text-decoration: none;
+        font-weight: 500;
+        font-size: 1em;
+        display: inline-block;
+        margin-top: 0;
+        transition: color 0.2s;
+    }
+    .area-info a span {
+        font-size: 1.2em;
+        font-weight: bold;
+        margin-left: 4px;
+    }
+    .area-info a:hover {
+        color: #fff;
+    }
+    @media (max-width: 900px) {
+        .areas-header, .areas-carrusel {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        .areas-header {
+            gap: 16px;
+        }
+        .areas-carrusel {
+            gap: 16px;
+        }
+    }
+         .areas-carrusel {
+            overflow: hidden;
+            width: 100%;
+            position: relative;
+            margin: 0 auto;
+        }
+        .areas-carrusel-track {
+            display: flex;
+            width: max-content;
+            animation: scroll-carrusel 40s linear infinite;
+        }
+        .area-card {
+            min-width: 260px;
+            margin-right: 24px;
+            flex: 0 0 auto;
+        }
+        @keyframes scroll-carrusel {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        /* Responsive */
+        @media (max-width: 800px) {
+            .area-card { min-width: 80vw; }
+        }
+        .hero {
+    position: relative;
+    width: 100%;
+    height: 55vh;
+    min-height: 340px;
+    max-height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url('foto-abogados.jpg') center center/cover no-repeat;
+}
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(26,34,54,0.55);
+    z-index: 1;
+}
+.hero-content {
+    position: relative;
+    z-index: 2;
+    color: #fff;
+    text-align: center;
+}
+.hero-btn {
+    background: #4ec3fa;
+    color: #fff;
+    padding: 12px 32px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 18px;
+    display: inline-block;
+    transition: background 0.2s;
+}
+.hero-btn:hover {
+    background: #1a2236;
+}
+@media (max-width: 800px) {
+    .hero { height: 32vh; min-height: 180px; }
+    .hero-content h1 { font-size: 1.5em; }
+}
+.area-img {
+    width: 100%;
+    height: 140px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 12px 12px 0 0;
+    margin-bottom: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    min-width: 120px;
+}
+@media (max-width: 600px) {
+    .area-img {
+        height: 90px;
+    }
+}

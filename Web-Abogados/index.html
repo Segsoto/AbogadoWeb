@@ -9,6 +9,16 @@
         .side-menu, .menu-icon, #menu-toggle {
             display: none !important;
         }
+        .area-img {
+    width: 100%;
+    height: 140px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 12px 12px 0 0;
+    margin-bottom: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    min-width: 120px;
+}
     </style>
 </head>
 <body>
@@ -23,6 +33,15 @@
             </nav>
         </div>
     </header>
+      <section class="hero">
+    <div class="hero-content">
+        <h1>Tu aliado legal en Costa Rica</h1>
+        <p>Soluciones jurídicas integrales para empresas y personas.</p>
+        <a href="contacto.html" class="hero-btn">Solicita tu consulta</a>
+    </div>
+</section>
+
+</section>
     <main class="main-welcome">
         <div class="welcome-content">
             <h1 style="font-size:3em; font-weight:900; color:#1a2236; margin-bottom:18px;">
@@ -39,149 +58,76 @@
     </main>
 
     <!-- Carrusel de áreas de práctica con título y botón -->
-    <section class="areas-section">
+       <section class="areas-section">
         <div class="areas-header">
             <h2 class="areas-title">ÁREAS DE PRÁCTICA</h2>
             <a href="areas.html" class="areas-btn">Explora más</a>
         </div>
         <div class="areas-carrusel">
-            <div class="area-card">
-                <div class="area-img" style="background-image:url('familia.jpg');"></div>
-                <div class="area-info">
-                    <h3>Derecho de familia</h3>
-                    <a href="areas.html#familia">Más información <span>+</span></a>
-                </div>
-            </div>
-            <div class="area-card">
-                <div class="area-img" style="background-image:url('tributario.jpg');"></div>
-                <div class="area-info">
-                    <h3>Derecho Tributario</h3>
-                    <a href="areas.html#tributario">Más información <span>+</span></a>
-                </div>
-            </div>
-            <div class="area-card">
-                <div class="area-img" style="background-image:url('penal.jpg');"></div>
-                <div class="area-info">
-                    <h3>Derecho Penal</h3>
-                    <a href="areas.html#penal">Más información <span>+</span></a>
-                </div>
-            </div>
-            <div class="area-card">
-                <div class="area-img" style="background-image:url('corporativo.jpg');"></div>
-                <div class="area-info">
-                    <h3>Derecho Corporativo</h3>
-                    <a href="areas.html#corporativo">Más información <span>+</span></a>
-                </div>
+            <div class="areas-carrusel-track">
+                <!-- Tarjetas originales -->
+<div class="area-card">
+    <div class="area-img" style="background-image:url('DerechoFamiliar.jpg');"></div>
+    <div class="area-info">
+        <h3>Derecho de familia</h3>
+        <a href="areas.html#familia">Más información <span>+</span></a>
+    </div>
+</div>
+<div class="area-card">
+    <div class="area-img" style="background-image:url('DerechoTributal.jpg');"></div>
+    <div class="area-info">
+        <h3>Derecho Tributario</h3>
+        <a href="areas.html#tributario">Más información <span>+</span></a>
+    </div>
+</div>
+<div class="area-card">
+    <div class="area-img" style="background-image:url('DerechoPenal.jpg');"></div>
+    <div class="area-info">
+        <h3>Derecho Penal</h3>
+        <a href="areas.html#penal">Más información <span>+</span></a>
+    </div>
+</div>
+<div class="area-card">
+    <div class="area-img" style="background-image:url('DerechoCorporativo.jpg');"></div>
+    <div class="area-info">
+        <h3>Derecho Corporativo</h3>
+        <a href="areas.html#corporativo">Más información <span>+</span></a>
+    </div>
+</div>
+<div class="area-card">
+    <div class="area-img" style="background-image:url('DerechoFamiliar.jpg');"></div>
+    <div class="area-info">
+        <h3>Derecho de familia</h3>
+        <a href="areas.html#familia">Más información <span>+</span></a>
+    </div>
+</div>
+<div class="area-card">
+    <div class="area-img" style="background-image:url('DerechoTributal.jpg');"></div>
+    <div class="area-info">
+        <h3>Derecho Tributario</h3>
+        <a href="areas.html#tributario">Más información <span>+</span></a>
+    </div>
+</div>
+<div class="area-card">
+    <div class="area-img" style="background-image:url('DerechoPenal.jpg');"></div>
+    <div class="area-info">
+        <h3>Derecho Penal</h3>
+        <a href="areas.html#penal">Más información <span>+</span></a>
+    </div>
+</div>
+<div class="area-card">
+    <div class="area-img" style="background-image:url('DerechoCorporativo.jpg');"></div>
+    <div class="area-info">
+        <h3>Derecho Corporativo</h3>
+        <a href="areas.html#corporativo">Más información <span>+</span></a>
+    </div>
+</div>
             </div>
         </div>
     </section>
 
     <style>
-    .areas-section {
-        background: #f5f8fc;
-        padding: 40px 0 30px 0;
-        margin-bottom: 30px;
-    }
-    .areas-header {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        max-width: 1100px;
-        margin: 0 auto 30px auto;
-        padding: 0 20px;
-    }
-    .areas-title {
-        font-size: 2.3em;
-        font-family: 'Georgia', serif;
-        font-weight: 800;
-        color: #1a2236;
-        margin: 0;
-        letter-spacing: 1px;
-    }
-    .areas-btn {
-        background: #18aee4;
-        color: #fff;
-        font-weight: 600;
-        padding: 10px 28px;
-        border-radius: 4px;
-        text-decoration: none;
-        font-size: 1.1em;
-        transition: background 0.2s;
-        border: none;
-        cursor: pointer;
-    }
-    .areas-btn:hover {
-        background: #0e8cc1;
-    }
-    .areas-carrusel {
-        display: flex;
-        gap: 28px;
-        max-width: 1100px;
-        margin: 0 auto;
-        overflow-x: auto;
-        padding: 0 20px;
-    }
-    .area-card {
-        background: #0d1a2b;
-        border-radius: 0 0 0 0;
-        box-shadow: 0 4px 24px rgba(0,0,0,0.08);
-        min-width: 260px;
-        max-width: 300px;
-        flex: 1 0 260px;
-        display: flex;
-        flex-direction: column;
-        margin-bottom: 0;
-    }
-    .area-img {
-        height: 160px;
-        background-size: cover;
-        background-position: center;
-        border-radius: 0;
-    }
-    .area-info {
-        padding: 22px 18px 18px 18px;
-        background: #0d1a2b;
-        border-radius: 0 0 0 0;
-        display: flex;
-        flex-direction: column;
-        min-height: 120px;
-        justify-content: space-between;
-    }
-    .area-info h3 {
-        color: #fff;
-        font-size: 1.18em;
-        font-weight: 700;
-        margin-bottom: 12px;
-    }
-    .area-info a {
-        color: #18aee4;
-        text-decoration: none;
-        font-weight: 500;
-        font-size: 1em;
-        display: inline-block;
-        margin-top: 0;
-        transition: color 0.2s;
-    }
-    .area-info a span {
-        font-size: 1.2em;
-        font-weight: bold;
-        margin-left: 4px;
-    }
-    .area-info a:hover {
-        color: #fff;
-    }
-    @media (max-width: 900px) {
-        .areas-header, .areas-carrusel {
-            flex-direction: column;
-            align-items: flex-start;
-        }
-        .areas-header {
-            gap: 16px;
-        }
-        .areas-carrusel {
-            gap: 16px;
-        }
-    }
+
     </style>
     
     <section class="blog-section">
@@ -219,6 +165,7 @@
             </div>
         </div>
     </section>
+    
 
     <footer>
         <div class="container">
