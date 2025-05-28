@@ -7,7 +7,8 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header class="topbar">
+   <header class="topbar">
+    <div class="container">
         <div class="topbar-content">
             <span class="topbar-logo">Sergio Madriz Avendaño</span>
             <nav class="main-menu main-menu-lineal">
@@ -18,7 +19,8 @@
                 <a href="ubicaciones.html">Ubicaciones</a>
             </nav>
         </div>
-    </header>
+    </div>
+</header>
 
     <main class="main-welcome" style="min-height: 80vh; display: flex; align-items: flex-start; justify-content: center;">
         <div class="welcome-content" style="background: #fff; border-radius: 18px; box-shadow: 0 4px 24px rgba(0,0,0,0.08); padding: 40px 30px; max-width: 700px; width: 100%;">
@@ -31,12 +33,73 @@
             </div>
             <h2 style="font-size:1.1em; color:#003366; margin-bottom:0;">Abogado & Notario</h2>
         </div>
+        <section class="mision-vision-container">
+    <div class="card-mv">
+        <h2>NUESTRA MISIÓN</h2>
+        <p>
+            Brindar Servicios Legales Integrales de la más elevada calidad profesional, teniendo como meta realizar nuestro Trabajo con la mayor eficiencia, de acuerdo a las necesidades de nuestros clientes.
+        </p>
+    </div>
+    <div class="card-mv">
+        <h2>NUESTRA VISIÓN</h2>
+        <p>
+            Nuestra meta es continuar siendo una firma legal líder en el mercado Nacional e Internacional, que brinde Asesoría Jurídica integral de las más alta Calidad Profesional y ética a sus clientes.
+        </p>
+    </div>
+</section>
     </main>
+    <section class="valores-container">
+  <div class="valor-item">
+    <div class="valor-titulo">Eficiencia</div>
+    <div class="valor-contenido">
+      Trabajamos con planes definidos para alcanzar resultados en el menor tiempo posible sin sacrificar calidad.
+    </div>
+  </div>
+
+  <div class="valor-item">
+    <div class="valor-titulo">Transparencia</div>
+    <div class="valor-contenido">
+      Mantenemos una comunicación clara y honesta con nuestros clientes en cada etapa del proceso legal.
+    </div>
+  </div>
+
+  <div class="valor-item">
+    <div class="valor-titulo">Justicia</div>
+    <div class="valor-contenido">
+      Defendemos los derechos de nuestros clientes con ética, imparcialidad y responsabilidad social.
+    </div>
+  </div>
+
+  <div class="valor-item">
+    <div class="valor-titulo">Especialización</div>
+    <div class="valor-contenido">
+      Nos actualizamos constantemente para ofrecer un servicio experto y adaptado a las necesidades actuales del derecho.
+    </div>
+  </div>
+
+
+</section>
+
+<script>
+  document.querySelectorAll('.valor-item').forEach(item => {
+    item.addEventListener('click', function(e) {
+      if (this.classList.contains('abierto')) {
+        this.classList.remove('abierto'); // Si ya está abierto, lo cierra
+      } else {
+        document.querySelectorAll('.valor-item').forEach(i => i.classList.remove('abierto'));
+        this.classList.add('abierto'); // Si no, lo abre y cierra los demás
+      }
+    });
+  });
+</script>
+
+    
 
     <footer>
         <div class="container">
             <p>&copy; 2025 Sergio Madriz Avendaño - Todos los derechos reservados.</p>
         </div>
+        
     </footer>
 </body>
 </html>
