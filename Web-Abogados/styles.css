@@ -498,3 +498,57 @@ footer {
                 font-size: 1em;
             }
         }
+                .areas-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 32px;
+            margin-top: 32px;
+        }
+        .area-card {
+            background: linear-gradient(135deg, #1a2236 80%, #2e3a59 100%);
+            border-radius: 16px;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+            padding: 28px 22px 22px 22px;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            min-height: 320px;
+            position: relative;
+            overflow: hidden;
+        }
+        .area-card .icon {
+            font-size: 2.8em;
+            margin-bottom: 18px;
+            color: #fff;
+            background: rgba(255,255,255,0.08);
+            border-radius: 12px;
+            padding: 14px;
+            display: inline-block;
+        }
+        .area-card h3 {
+            font-size: 1.25em;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: #fff;
+        }
+        .area-card p {
+            font-size: 1em;
+            color: #eaf2fb;
+            margin-bottom: 0;
+        }
+        .area-card a {
+            color: #4ec3fa;
+            text-decoration: underline;
+            font-size: 0.98em;
+            margin-top: 8px;
+            display: inline-block;
+        }
+        @media (max-width: 800px) {
+            .areas-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        .side-menu, .menu-icon, #menu-toggle {
+            display: none !important;
+        }
