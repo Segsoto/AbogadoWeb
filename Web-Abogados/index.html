@@ -6,10 +6,93 @@
     <title>Sergio Madriz Avendaño - Abogado</title>
     <link rel="stylesheet" href="styles.css">
     <style>
-        .side-menu, .menu-icon, #menu-toggle {
-            display: none !important;
-        }
-        .area-img {
+.side-menu {
+    display: none !important;
+}
+.topbar {
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    width: 100%;
+    min-height: 70px;
+    display: flex;
+    align-items: center;
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+.topbar-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    gap: 8px;
+}
+.topbar-logo {
+    font-size: 1.3em;
+    font-weight: bold;
+    color: #1a2236;
+    padding-left: 16px;
+    margin-bottom: 0;
+}
+.main-menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 8px;
+    background: transparent;
+    border-radius: 0;
+    box-shadow: none;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+.main-menu a {
+    display: block;
+    padding: 12px 22px;
+    color: #1a2236;
+    font-size: 1em;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: background 0.2s, color 0.2s;
+}
+.main-menu a:hover,
+.main-menu a.active {
+    background: #2e3a59;
+    color: #fff;
+}
+@media (max-width: 800px) {
+    .topbar {
+        min-height: 60px;
+        padding-top: 8px;
+        padding-bottom: 8px;
+    }
+    .topbar-content {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 4px;
+    }
+    .main-menu {
+        flex-direction: column;
+        align-items: stretch;
+        background: #f5f8fa;
+        border-radius: 10px;
+        box-shadow: 0 2px 8px rgba(30, 50, 100, 0.07);
+        width: 100%;
+        margin-top: 8px;
+        gap: 0;
+    }
+    .main-menu a {
+        border-radius: 0;
+        border-bottom: 1px solid #e3e8ee;
+        padding: 14px 18px;
+        font-size: 1.1em;
+    }
+    .main-menu a:last-child {
+        border-bottom: none;
+    }
+}
+.area-img {
     width: 100%;
     height: 140px;
     background-size: cover;
@@ -19,21 +102,28 @@
     box-shadow: 0 2px 8px rgba(0,0,0,0.07);
     min-width: 120px;
 }
-    </style>
+.menu-toggle {
+    display: none;
+}
+.menu-icon {
+    display: none;
+}
+</style>
 </head>
 
 <body>
-    <header class="topbar">
+<header class="topbar">
     <div class="container">
-        <div class="topbar-content">
+        <div class="topbar-content" style="display: flex; align-items: center; justify-content: space-between;">
             <span class="topbar-logo">Sergio Madriz Avendaño</span>
-            <nav class="main-menu main-menu-lineal">
-                <a href="index.html">Inicio</a>
-                <a href="quien-soy.html">Quién Soy</a>
-                <a href="areas.html" class="active">Áreas</a>
-                <a href="contacto.html">Contacto</a>
-                <a href="ubicaciones.html">Ubicaciones</a>
-            </nav>
+
+            <nav class="main-menu">
+    <a href="index.html"class="active">Inicio</a>
+    <a href="quien-soy.html">Quién Soy</a>
+    <a href="areas.html" >Áreas</a>
+    <a href="contacto.html">Contacto</a>
+    <a href="ubicaciones.html">Ubicaciones</a>
+</nav>
         </div>
     </div>
 </header>
