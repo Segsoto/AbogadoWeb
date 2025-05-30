@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Sergio Madriz Avendaño - Abogado</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
    <header class="topbar">
@@ -95,11 +96,67 @@
 
     
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 Sergio Madriz Avendaño - Todos los derechos reservados.</p>
+<footer>
+    <div class="footer-bar">
+        <p class="footer-copy">&copy; 2025 Sergio Madriz Avendaño - Todos los derechos reservados.</p>
+        <div class="footer-social">
+            <a href="https://wa.me/506XXXXXXXX" target="_blank" title="WhatsApp">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+            <a href="https://instagram.com/TU_USUARIO" target="_blank" title="Instagram">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://facebook.com/TU_USUARIO" target="_blank" title="Facebook">
+                <i class="fab fa-facebook"></i>
+            </a>
         </div>
-        
-    </footer>
+    </div>
+</footer>
+<style>
+.footer-bar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 24px 18px 24px;
+    box-sizing: border-box;
+    background: #1a2236;
+    border-top: 1px solid #ffffff;
+    /* position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 100; */
+}
+.footer-copy {
+    color: #ffffff;
+    font-size: 1em;
+    margin: 0;
+}
+.footer-social a {
+    margin: 0 8px;
+    font-size: 1.6em;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+.footer-social a[title="WhatsApp"] { color: #25d366; }
+.footer-social a[title="Instagram"] { color: #e4405f; }
+.footer-social a[title="Facebook"] { color: #1877f3; }
+.footer-social a:hover { opacity: 0.7; }
+@media (max-width: 600px) {
+    .footer-bar {
+        flex-direction: column;
+        gap: 8px;
+        padding: 12px 8px;
+        text-align: center;
+        /* position: fixed;
+        bottom: 0;
+        left: 0;
+        z-index: 100; */
+    }
+    .footer-social {
+        margin-top: 4px;
+    }
+}
+</style>
 </body>
 </html>
