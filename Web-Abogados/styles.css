@@ -545,6 +545,9 @@ footer {
         font-size: 1em;
     }
 }
+.main-menu a {
+    font-weight: bold;
+}
 
 .areas-section {
     background: #f5f8fc;
