@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -8,322 +9,372 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <style>
-.side-menu {
-    display: none !important;
-}
-.topbar {
-    background: #fff;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
-    width: 100%;
-    min-height: 70px;
-    display: flex;
-    align-items: center;
-    padding-top: 12px;
-    padding-bottom: 12px;
-}
-.topbar-content {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    gap: 32px;
-}
+        .side-menu {
+            display: none !important;
+        }
 
-.topbar-logo {
-    font-size: 1.3em;
-    font-weight: bold;
-    color: #1a2236;
-    padding-left: 16px;
-    margin-bottom: 0;
-    white-space: nowrap;
-}
-.main-menu {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 8px;
-    background: transparent;
-    border-radius: 0;
-    box-shadow: none;
-    width: auto;
-    margin: 0;
-    padding: 0;
-}
+        .topbar {
+            background: #fff;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+            width: 100%;
+            min-height: 70px;
+            display: flex;
+            align-items: center;
+            padding-top: 12px;
+            padding-bottom: 12px;
+        }
 
-.main-menu a {
-    display: block;
-    padding: 12px 22px;
-    color: #1a2236;
-    font-size: 1em;
-    text-decoration: none;
-    border-radius: 6px;
-    transition: background 0.2s, color 0.2s;
-}
-.main-menu a:hover,
-.main-menu a.active {
-    background: #2e3a59;
-    color: #fff;
-}
+        .topbar-content {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            gap: 32px;
+        }
 
-.area-img {
-    width: 100%;
-    height: 140px;
-    background-size: cover;
-    background-position: center;
-    border-radius: 12px 12px 0 0;
-    margin-bottom: 12px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
-    min-width: 120px;
-}
-.menu-toggle {
-    display: none;
-}
-.menu-icon {
-    display: none;
-}
-</style>
+        .topbar-logo {
+            font-size: 1.3em;
+            font-weight: bold;
+            color: #1a2236;
+            padding-left: 16px;
+            margin-bottom: 0;
+            white-space: nowrap;
+        }
+
+        .main-menu {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            gap: 8px;
+            background: transparent;
+            border-radius: 0;
+            box-shadow: none;
+            width: auto;
+            margin: 0;
+            padding: 0;
+        }
+
+        .main-menu a {
+            display: block;
+            padding: 12px 22px;
+            color: #1a2236;
+            font-size: 1em;
+            text-decoration: none;
+            border-radius: 6px;
+            transition: background 0.2s, color 0.2s;
+        }
+
+        .main-menu a:hover,
+        .main-menu a.active {
+            background: #2e3a59;
+            color: #fff;
+        }
+
+        .area-img {
+            width: 100%;
+            height: 140px;
+            background-size: cover;
+            background-position: center;
+            border-radius: 12px 12px 0 0;
+            margin-bottom: 12px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+            min-width: 120px;
+        }
+
+        .menu-toggle {
+            display: none;
+        }
+
+        .menu-icon {
+            display: none;
+        }
+    </style>
 </head>
 
 <body>
-<header class="topbar py-2">
-<div class="container">
-    <div class="d-flex flex-row align-items-center justify-content-center gap-4 flex-wrap topbar-content">
-    <span class="topbar-logo">Sergio Madriz Avendaño</span>
-    <nav class="main-menu d-flex flex-row align-items-center gap-2">
-        <a href="index.html" class="active">Inicio</a>
-        <a href="quien-soy.html">Quién Soy</a>
-        <a href="areas.html">Áreas</a>
-        <a href="contacto.html">Contacto</a>
-        <a href="ubicaciones.html">Ubicaciones</a>
-    </nav>
-    </div>
-</div>
-</header>
-<section class="hero">
-    <div class="hero-content">
-        <h1>Tu aliado legal en Costa Rica</h1>
-        <p>Soluciones jurídicas integrales para empresas y personas.</p>
-        <a href="contacto.html" class="hero-btn">Solicita tu consulta</a>
-    </div>
-</section>
+    <header class="topbar py-2">
+        <div class="container">
+            <div class="d-flex flex-row align-items-center justify-content-between topbar-content">
+                <span class="topbar-logo">Sergio Madriz Avendaño</span>
+                <!-- Botón hamburguesa solo visible en móvil -->
+                <button class="navbar-toggler d-md-none" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#mainMenu" aria-controls="mainMenu" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <!-- Menú principal -->
+                <nav class="main-menu collapse d-md-flex flex-row align-items-center gap-2" id="mainMenu">
+                    <a href="index.html" class="active">Inicio</a>
+                    <a href="quien-soy.html">Quién Soy</a>
+                    <a href="areas.html">Áreas</a>
+                    <a href="contacto.html">Contacto</a>
+                    <a href="ubicaciones.html">Ubicaciones</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Tu aliado legal en Costa Rica</h1>
+            <p>Soluciones jurídicas integrales para empresas y personas.</p>
+            <a href="contacto.html" class="hero-btn">Solicita tu consulta</a>
+        </div>
+    </section>
 
-<main class="main-welcome">
-    <div class="welcome-content">
-        <h1 style="font-size:3em; font-weight:900; color:#1a2236; margin-bottom:18px;">
-            Bienvenido a mi despacho jurídico
-        </h1>
-        <h2 style="font-size:1.7em; color:#2e3a59; font-weight:600; margin-bottom:28px;">
-            Sergio Madriz Avendaño<br>Abogado & Notario
-        </h2>
-        <p class="welcome-text" style="font-size:1.3em; color:#444; line-height:1.7; max-width:600px; margin:0 auto;">
-            Asesoría legal confiable, ética y profesional.<br>
-            Soluciones jurídicas personalizadas, defendiendo siempre sus derechos e intereses con integridad y excelencia.
-        </p>
-    </div>
-</main>
+    <main class="main-welcome">
+        <div class="welcome-content">
+            <h1 style="font-size:3em; font-weight:900; color:#1a2236; margin-bottom:18px;">
+                Bienvenido a mi despacho jurídico
+            </h1>
+            <h2 style="font-size:1.7em; color:#2e3a59; font-weight:600; margin-bottom:28px;">
+                Sergio Madriz Avendaño<br>Abogado & Notario
+            </h2>
+            <p class="welcome-text"
+                style="font-size:1.3em; color:#444; line-height:1.7; max-width:600px; margin:0 auto;">
+                Asesoría legal confiable, ética y profesional.<br>
+                Soluciones jurídicas personalizadas, defendiendo siempre sus derechos e intereses con integridad y
+                excelencia.
+            </p>
+        </div>
+    </main>
 
-<!-- Carrusel de áreas de práctica con título y botón -->
-<section class="areas-section">
-    <div class="areas-header">
-        <h2 class="areas-title">ÁREAS DE PRÁCTICA</h2>
-        <a href="areas.html" class="areas-btn">Explora más</a>
-    </div>
-    <div class="areas-carrusel">
-        <div class="areas-carrusel-track">
-            <!-- Tarjetas originales -->
-            <div class="area-card">
-                <div class="area-img" style="background-image:url('Imagenes/DerechoFamiliar.jpg');"></div>
-                <div class="area-info">
-                    <h3>Derecho de familia</h3>
-                    <a href="areas.html#familia">Más información <span>+</span></a>
+    <!-- Carrusel de áreas de práctica con título y botón -->
+    <section class="areas-section">
+        <div class="areas-header">
+            <h2 class="areas-title">ÁREAS DE PRÁCTICA</h2>
+            <a href="areas.html" class="areas-btn">Explora más</a>
+        </div>
+        <div class="areas-carrusel">
+            <div class="areas-carrusel-track">
+                <!-- Tarjetas originales -->
+                <div class="area-card">
+                    <div class="area-img" style="background-image:url('Imagenes/DerechoFamiliar.jpg');"></div>
+                    <div class="area-info">
+                        <h3>Derecho de familia</h3>
+                        <a href="areas.html#familia">Más información <span>+</span></a>
+                    </div>
                 </div>
-            </div>
-            <div class="area-card">
-                <div class="area-img" style="background-image:url('Imagenes/DerechoTributal.jpg');"></div>
-                <div class="area-info">
-                    <h3>Derecho Tributario</h3>
-                    <a href="areas.html#tributario">Más información <span>+</span></a>
+                <div class="area-card">
+                    <div class="area-img" style="background-image:url('Imagenes/DerechoTributal.jpg');"></div>
+                    <div class="area-info">
+                        <h3>Derecho Tributario</h3>
+                        <a href="areas.html#tributario">Más información <span>+</span></a>
+                    </div>
                 </div>
-            </div>
-            <div class="area-card">
-                <div class="area-img" style="background-image:url('Imagenes/DerechoPenal.jpg');"></div>
-                <div class="area-info">
-                    <h3>Derecho Penal</h3>
-                    <a href="areas.html#penal">Más información <span>+</span></a>
+                <div class="area-card">
+                    <div class="area-img" style="background-image:url('Imagenes/DerechoPenal.jpg');"></div>
+                    <div class="area-info">
+                        <h3>Derecho Penal</h3>
+                        <a href="areas.html#penal">Más información <span>+</span></a>
+                    </div>
                 </div>
-            </div>
-            <div class="area-card">
-                <div class="area-img" style="background-image:url('Imagenes/DerechoCorporativo.jpg');"></div>
-                <div class="area-info">
-                    <h3>Derecho Corporativo</h3>
-                    <a href="areas.html#corporativo">Más información <span>+</span></a>
+                <div class="area-card">
+                    <div class="area-img" style="background-image:url('Imagenes/DerechoCorporativo.jpg');"></div>
+                    <div class="area-info">
+                        <h3>Derecho Corporativo</h3>
+                        <a href="areas.html#corporativo">Más información <span>+</span></a>
+                    </div>
                 </div>
-            </div>
-            <div class="area-card">
-                <div class="area-img" style="background-image:url('Imagenes/DerechoFamiliar.jpg');"></div>
-                <div class="area-info">
-                    <h3>Derecho de familia</h3>
-                    <a href="areas.html#familia">Más información <span>+</span></a>
+                <div class="area-card">
+                    <div class="area-img" style="background-image:url('Imagenes/DerechoFamiliar.jpg');"></div>
+                    <div class="area-info">
+                        <h3>Derecho de familia</h3>
+                        <a href="areas.html#familia">Más información <span>+</span></a>
+                    </div>
                 </div>
-            </div>
-            <div class="area-card">
-                <div class="area-img" style="background-image:url('Imagenes/DerechoTributal.jpg');"></div>
-                <div class="area-info">
-                    <h3>Derecho Tributario</h3>
-                    <a href="areas.html#tributario">Más información <span>+</span></a>
+                <div class="area-card">
+                    <div class="area-img" style="background-image:url('Imagenes/DerechoTributal.jpg');"></div>
+                    <div class="area-info">
+                        <h3>Derecho Tributario</h3>
+                        <a href="areas.html#tributario">Más información <span>+</span></a>
+                    </div>
                 </div>
-            </div>
-            <div class="area-card">
-                <div class="area-img" style="background-image:url('Imagenes/DerechoPenal.jpg');"></div>
-                <div class="area-info">
-                    <h3>Derecho Penal</h3>
-                    <a href="areas.html#penal">Más información <span>+</span></a>
+                <div class="area-card">
+                    <div class="area-img" style="background-image:url('Imagenes/DerechoPenal.jpg');"></div>
+                    <div class="area-info">
+                        <h3>Derecho Penal</h3>
+                        <a href="areas.html#penal">Más información <span>+</span></a>
+                    </div>
                 </div>
-            </div>
-            <div class="area-card">
-                <div class="area-img" style="background-image:url('Imagenes/DerechoCorporativo.jpg');"></div>
-                <div class="area-info">
-                    <h3>Derecho Corporativo</h3>
-                    <a href="areas.html#corporativo">Más información <span>+</span></a>
+                <div class="area-card">
+                    <div class="area-img" style="background-image:url('Imagenes/DerechoCorporativo.jpg');"></div>
+                    <div class="area-info">
+                        <h3>Derecho Corporativo</h3>
+                        <a href="areas.html#corporativo">Más información <span>+</span></a>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<section class="blog-section">
-    <h2 class="blog-title">Testimonios de nuestros clientes</h2>
-    <div class="blog-grid">
-        <div class="blog-card">
-            <div class="blog-img" style="background-image:url('Imagenes/testimonio1.jpg'); background-size:cover; background-position:center;"></div>
-            <div class="blog-content">
-                <h3>Excelente servicio y atención</h3>
-                <p class="blog-meta">por María Rodríguez | Feb 2024</p>
-                <p>
-                    “Sergio me ayudó a resolver un proceso legal complicado con mucha dedicación y profesionalismo. Lo recomiendo totalmente.”
-                </p>
+    <section class="blog-section">
+        <h2 class="blog-title">Testimonios de nuestros clientes</h2>
+        <div class="blog-grid">
+            <div class="blog-card">
+                <div class="blog-img"
+                    style="background-image:url('Imagenes/testimonio1.jpg'); background-size:cover; background-position:center;">
+                </div>
+                <div class="blog-content">
+                    <h3>Excelente servicio y atención</h3>
+                    <p class="blog-meta">por María Rodríguez | Feb 2024</p>
+                    <p>
+                        “Sergio me ayudó a resolver un proceso legal complicado con mucha dedicación y profesionalismo.
+                        Lo recomiendo totalmente.”
+                    </p>
+                </div>
+            </div>
+            <div class="blog-card">
+                <div class="blog-img"
+                    style="background-image:url('Imagenes/testimonio2.jpg'); background-size:cover; background-position:center; filter: grayscale(1);">
+                </div>
+                <div class="blog-content">
+                    <h3>Confianza y resultados</h3>
+                    <p class="blog-meta">por Carlos Jiménez | Dic 2023</p>
+                    <p>
+                        “Desde el primer contacto sentí confianza. El acompañamiento fue personalizado y siempre estuvo
+                        atento a mis dudas.”
+                    </p>
+                </div>
+            </div>
+            <div class="blog-card">
+                <div class="blog-img"
+                    style="background-image:url('Imagenes/testimonio3.jpg'); background-size:cover; background-position:center; filter: grayscale(1);">
+                </div>
+                <div class="blog-content">
+                    <h3>Recomendado para trámites notariales</h3>
+                    <p class="blog-meta">por Ana Vargas | Oct 2023</p>
+                    <p>
+                        “Me apoyó con trámites notariales de forma rápida y clara. Muy profesional y amable en todo
+                        momento.”
+                    </p>
+                </div>
+            </div>
+            <!-- Testimonio 4 -->
+            <div class="blog-card">
+                <div class="blog-img"
+                    style="background-image:url('Imagenes/testimonio4.jpg'); background-size:cover; background-position:center;">
+                </div>
+                <div class="blog-content">
+                    <h3>Atención personalizada</h3>
+                    <p class="blog-meta">por Luis Fernández | Ago 2023</p>
+                    <p>
+                        “Agradezco la paciencia y el trato personalizado que recibí. Sergio resolvió todas mis dudas y
+                        me acompañó en cada paso del proceso.”
+                    </p>
+                </div>
+            </div>
+            <!-- Testimonio 5 -->
+            <div class="blog-card">
+                <div class="blog-img"
+                    style="background-image:url('Imagenes/testimonio5.jpg'); background-size:cover; background-position:center; filter: grayscale(1);">
+                </div>
+                <div class="blog-content">
+                    <h3>Resolución rápida</h3>
+                    <p class="blog-meta">por Gabriela Soto | Jun 2023</p>
+                    <p>
+                        “Mi caso se resolvió mucho más rápido de lo que esperaba. Muy agradecida por la eficiencia y el
+                        profesionalismo.”
+                    </p>
+                </div>
+            </div>
+            <!-- Testimonio 6 -->
+            <div class="blog-card">
+                <div class="blog-img"
+                    style="background-image:url('Imagenes/testimonio6.jpg'); background-size:cover; background-position:center;">
+                </div>
+                <div class="blog-content">
+                    <h3>Gran calidad humana</h3>
+                    <p class="blog-meta">por Esteban Mora | Abr 2023</p>
+                    <p>
+                        “No solo recibí asesoría legal, sino también apoyo humano en un momento difícil. Recomiendo a
+                        Sergio por su calidad profesional y humana.”
+                    </p>
+                </div>
             </div>
         </div>
-        <div class="blog-card">
-            <div class="blog-img" style="background-image:url('Imagenes/testimonio2.jpg'); background-size:cover; background-position:center; filter: grayscale(1);"></div>
-            <div class="blog-content">
-                <h3>Confianza y resultados</h3>
-                <p class="blog-meta">por Carlos Jiménez | Dic 2023</p>
-                <p>
-                    “Desde el primer contacto sentí confianza. El acompañamiento fue personalizado y siempre estuvo atento a mis dudas.”
-                </p>
-            </div>
-        </div>
-        <div class="blog-card">
-            <div class="blog-img" style="background-image:url('Imagenes/testimonio3.jpg'); background-size:cover; background-position:center; filter: grayscale(1);"></div>
-            <div class="blog-content">
-                <h3>Recomendado para trámites notariales</h3>
-                <p class="blog-meta">por Ana Vargas | Oct 2023</p>
-                <p>
-                    “Me apoyó con trámites notariales de forma rápida y clara. Muy profesional y amable en todo momento.”
-                </p>
-            </div>
-        </div>
-        <!-- Testimonio 4 -->
-        <div class="blog-card">
-            <div class="blog-img" style="background-image:url('Imagenes/testimonio4.jpg'); background-size:cover; background-position:center;"></div>
-            <div class="blog-content">
-                <h3>Atención personalizada</h3>
-                <p class="blog-meta">por Luis Fernández | Ago 2023</p>
-                <p>
-                    “Agradezco la paciencia y el trato personalizado que recibí. Sergio resolvió todas mis dudas y me acompañó en cada paso del proceso.”
-                </p>
-            </div>
-        </div>
-        <!-- Testimonio 5 -->
-        <div class="blog-card">
-            <div class="blog-img" style="background-image:url('Imagenes/testimonio5.jpg'); background-size:cover; background-position:center; filter: grayscale(1);"></div>
-            <div class="blog-content">
-                <h3>Resolución rápida</h3>
-                <p class="blog-meta">por Gabriela Soto | Jun 2023</p>
-                <p>
-                    “Mi caso se resolvió mucho más rápido de lo que esperaba. Muy agradecida por la eficiencia y el profesionalismo.”
-                </p>
-            </div>
-        </div>
-        <!-- Testimonio 6 -->
-        <div class="blog-card">
-            <div class="blog-img" style="background-image:url('Imagenes/testimonio6.jpg'); background-size:cover; background-position:center;"></div>
-            <div class="blog-content">
-                <h3>Gran calidad humana</h3>
-                <p class="blog-meta">por Esteban Mora | Abr 2023</p>
-                <p>
-                    “No solo recibí asesoría legal, sino también apoyo humano en un momento difícil. Recomiendo a Sergio por su calidad profesional y humana.”
-                </p>
-            </div>
-        </div>
-    </div>
-</section>
+    </section>
 
-<footer>
-    <div class="footer-bar">
-        <p class="footer-copy">&copy; 2025 Sergio Madriz Avendaño - Todos los derechos reservados.</p>
-        <div class="footer-social">
-            <a href="https://wa.me/506XXXXXXXX" target="_blank" title="WhatsApp">
-                <i class="fab fa-whatsapp"></i>
-            </a>
-            <a href="https://instagram.com/TU_USUARIO" target="_blank" title="Instagram">
-                <i class="fab fa-instagram"></i>
-            </a>
-            <a href="https://facebook.com/TU_USUARIO" target="_blank" title="Facebook">
-                <i class="fab fa-facebook"></i>
-            </a>
+    <footer>
+        <div class="footer-bar">
+            <p class="footer-copy">&copy; 2025 Sergio Madriz Avendaño - Todos los derechos reservados.</p>
+            <div class="footer-social">
+                <a href="https://wa.me/506XXXXXXXX" target="_blank" title="WhatsApp">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+                <a href="https://instagram.com/TU_USUARIO" target="_blank" title="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://facebook.com/TU_USUARIO" target="_blank" title="Facebook">
+                    <i class="fab fa-facebook"></i>
+                </a>
+            </div>
         </div>
-    </div>
-</footer>
-<style>
-.footer-bar {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 18px 24px 18px 24px;
-    box-sizing: border-box;
-    background: #1a2236;
-    border-top: 1px solid #ffffff;
-    /* position: fixed;
+    </footer>
+    <style>
+        .footer-bar {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 18px 24px 18px 24px;
+            box-sizing: border-box;
+            background: #1a2236;
+            border-top: 1px solid #ffffff;
+            /* position: fixed;
     bottom: 0;
     left: 0;
     z-index: 100; */
-}
-.footer-copy {
-    color: #ffffff;
-    font-size: 1em;
-    margin: 0;
-}
-.footer-social a {
-    margin: 0 8px;
-    font-size: 1.6em;
-    text-decoration: none;
-    transition: color 0.2s;
-}
-.footer-social a[title="WhatsApp"] { color: #25d366; }
-.footer-social a[title="Instagram"] { color: #e4405f; }
-.footer-social a[title="Facebook"] { color: #1877f3; }
-.footer-social a:hover { opacity: 0.7; }
-@media (max-width: 600px) {
-    .footer-bar {
-        flex-direction: column;
-        gap: 8px;
-        padding: 12px 8px;
-        text-align: center;
-        /* position: fixed;
+        }
+
+        .footer-copy {
+            color: #ffffff;
+            font-size: 1em;
+            margin: 0;
+        }
+
+        .footer-social a {
+            margin: 0 8px;
+            font-size: 1.6em;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .footer-social a[title="WhatsApp"] {
+            color: #25d366;
+        }
+
+        .footer-social a[title="Instagram"] {
+            color: #e4405f;
+        }
+
+        .footer-social a[title="Facebook"] {
+            color: #1877f3;
+        }
+
+        .footer-social a:hover {
+            opacity: 0.7;
+        }
+
+        @media (max-width: 600px) {
+            .footer-bar {
+                flex-direction: column;
+                gap: 8px;
+                padding: 12px 8px;
+                text-align: center;
+                /* position: fixed;
         bottom: 0;
         left: 0;
         z-index: 100; */
-    }
-    .footer-social {
-        margin-top: 4px;
-    }
-}
-</style>
+            }
+
+            .footer-social {
+                margin-top: 4px;
+            }
+        }
+    </style>
 
 </body>
+
 </html>

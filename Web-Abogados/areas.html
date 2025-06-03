@@ -129,14 +129,21 @@
 
 <body>
     <!-- Header de navegación superior -->
-    <header class="topbar">
+    <header class="topbar py-2">
         <div class="container">
-            <div class="topbar-content">
+            <div class="d-flex flex-row align-items-center justify-content-between topbar-content">
                 <span class="topbar-logo">Sergio Madriz Avendaño</span>
-                <nav class="main-menu main-menu-lineal">
-                    <a href="index.html">Inicio</a>
+                <!-- Botón hamburguesa solo visible en móvil -->
+                <button class="navbar-toggler d-md-none" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#mainMenu" aria-controls="mainMenu" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <!-- Menú principal -->
+                <nav class="main-menu collapse d-md-flex flex-row align-items-center gap-2" id="mainMenu">
+                    <a href="index.html" class="active">Inicio</a>
                     <a href="quien-soy.html">Quién Soy</a>
-                    <a href="areas.html" class="active">Áreas</a>
+                    <a href="areas.html">Áreas</a>
                     <a href="contacto.html">Contacto</a>
                     <a href="ubicaciones.html">Ubicaciones</a>
                 </nav>
