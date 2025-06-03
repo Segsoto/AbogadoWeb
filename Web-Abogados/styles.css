@@ -429,7 +429,7 @@ footer {
 
 .topbar {
     width: 100%;
-    background: linear-gradient(90deg, #1a2236 60%, #4ec3fa 100%);
+    background: linear-gradient(90deg, #0a2342 60%, #00509e 100%);
     color: #fff;
     box-shadow: 0 2px 12px rgba(0, 0, 0, 0.07);
     padding: 0;
@@ -450,6 +450,7 @@ footer {
     font-size: 1.35em;
     font-weight: 800;
     letter-spacing: 1px;
+    color: #fff;
 }
 
 .topbar-desc {
@@ -478,7 +479,7 @@ footer {
 
 .topbar {
     width: 100%;
-    background: linear-gradient(90deg, #1a2236 60%, #4ec3fa 100%);
+    background: linear-gradient(90deg, #0a2342 60%, #00509e 100%);
     color: #fff;
     box-shadow: 0 2px 12px rgba(0, 0, 0, 0.07);
     position: relative;
@@ -530,9 +531,10 @@ footer {
     border-right: none;
 }
 
-.main-menu-lineal a:hover {
+.main-menu-lineal a:hover,
+.main-menu-lineal a.active {
     background: rgba(255, 255, 255, 0.10);
-    color: #4ec3fa;
+    color: #ffd700;
 }
 
 @media (max-width: 900px) {
@@ -544,6 +546,9 @@ footer {
         padding: 10px 14px;
         font-size: 1em;
     }
+}
+.main-menu a {
+    font-weight: bold;
 }
 
 .areas-section {
@@ -1069,4 +1074,72 @@ footer {
 
 .menu-icon {
     display: none;
+}
+.profile-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+  padding: 40px 20px;
+  max-width: 500px;
+  margin: 40px auto 0 auto;
+}
+
+.profile-photo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.portrait-img {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.13);
+  border: 4px solid #fff;
+  background: #eaf2fb;
+}
+
+.profile-info {
+  text-align: center;
+}
+
+.profile-info h1 {
+  font-size: 2em;
+  color: #1a2236;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+.profile-info h2 {
+  font-size: 1.1em;
+  color: #003366;
+  margin-bottom: 18px;
+  font-weight: 700;
+}
+
+.profile-info p {
+  font-size: 1.15em;
+  color: #2e3a59;
+  margin-bottom: 0;
+}
+
+/* Responsive para móvil */
+@media (max-width: 700px) {
+  .profile-container {
+    flex-direction: column;
+    padding: 24px 8px;
+    gap: 18px;
+  }
+  .profile-info {
+    text-align: center;
+  }
+  .profile-photo {
+    margin-bottom: 10px;
+  }
 }
