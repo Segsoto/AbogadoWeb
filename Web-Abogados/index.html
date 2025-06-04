@@ -8,92 +8,22 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <style>
-        .side-menu {
-            display: none !important;
+        @media (max-width: 991.98px) {
+            .navbar-toggler.d-md-none {
+                display: flex !important;
+            }
         }
 
-        .topbar {
-            background: #fff;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
-            width: 100%;
-            min-height: 70px;
-            display: flex;
-            align-items: center;
-            padding-top: 12px;
-            padding-bottom: 12px;
-        }
-
-        .topbar-content {
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: center;
-            width: 100%;
-            gap: 32px;
-        }
-
-        .topbar-logo {
-            font-size: 1.3em;
-            font-weight: bold;
-            color: #1a2236;
-            padding-left: 16px;
-            margin-bottom: 0;
-            white-space: nowrap;
-        }
-
-        .main-menu {
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            align-items: center;
-            gap: 8px;
-            background: transparent;
-            border-radius: 0;
-            box-shadow: none;
-            width: auto;
-            margin: 0;
-            padding: 0;
-        }
-
-        .main-menu a {
-            display: block;
-            padding: 12px 22px;
-            color: #1a2236;
-            font-size: 1em;
-            text-decoration: none;
-            border-radius: 6px;
-            transition: background 0.2s, color 0.2s;
-        }
-
-        .main-menu a:hover,
-        .main-menu a.active {
-            background: #2e3a59;
-            color: #fff;
-        }
-
-        .area-img {
-            width: 100%;
-            height: 140px;
-            background-size: cover;
-            background-position: center;
-            border-radius: 12px 12px 0 0;
-            margin-bottom: 12px;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
-            min-width: 120px;
-        }
-
-        .menu-toggle {
-            display: none;
-        }
-
-        .menu-icon {
-            display: none;
+        @media (min-width: 992px) {
+            .navbar-toggler.d-md-none {
+                display: none !important;
+            }
         }
     </style>
 </head>
 
 <body>
-    <header class="topbar py-2">
+    <header class="topbar py-2 navbar-dark" style="position:relative; z-index:3000;">
         <div class="container">
             <div class="d-flex flex-row align-items-center justify-content-between topbar-content">
                 <span class="topbar-logo">Sergio Madriz Avendaño</span>
@@ -101,7 +31,7 @@
                 <button class="navbar-toggler d-md-none" type="button" data-bs-toggle="collapse"
                     data-bs-target="#mainMenu" aria-controls="mainMenu" aria-expanded="false"
                     aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
+                    <span class="navbar-toggler-icon"><span></span></span>
                 </button>
                 <!-- Menú principal -->
                 <nav class="main-menu collapse d-md-flex flex-row align-items-center gap-2" id="mainMenu">
@@ -311,69 +241,8 @@
             </div>
         </div>
     </footer>
-    <style>
-        .footer-bar {
-            width: 100%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 18px 24px 18px 24px;
-            box-sizing: border-box;
-            background: #1a2236;
-            border-top: 1px solid #ffffff;
-            /* position: fixed;
-    bottom: 0;
-    left: 0;
-    z-index: 100; */
-        }
-
-        .footer-copy {
-            color: #ffffff;
-            font-size: 1em;
-            margin: 0;
-        }
-
-        .footer-social a {
-            margin: 0 8px;
-            font-size: 1.6em;
-            text-decoration: none;
-            transition: color 0.2s;
-        }
-
-        .footer-social a[title="WhatsApp"] {
-            color: #25d366;
-        }
-
-        .footer-social a[title="Instagram"] {
-            color: #e4405f;
-        }
-
-        .footer-social a[title="Facebook"] {
-            color: #1877f3;
-        }
-
-        .footer-social a:hover {
-            opacity: 0.7;
-        }
-
-        @media (max-width: 600px) {
-            .footer-bar {
-                flex-direction: column;
-                gap: 8px;
-                padding: 12px 8px;
-                text-align: center;
-                /* position: fixed;
-        bottom: 0;
-        left: 0;
-        z-index: 100; */
-            }
-
-            .footer-social {
-                margin-top: 4px;
-            }
-        }
-    </style>
-
+    <script src="scripts.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
