@@ -1427,7 +1427,7 @@ footer {
      
 }
 #touch {position: absolute; opacity: 0; height: 0px;}
-#touch:checked + .slide {height: 220px;}
+#touch:checked + .slide {height: 270px;}
 /* Solo mostrar en móvil */
 @media (max-width: 991.98px) {
     .mobile-dropdown-menu { display: block; }

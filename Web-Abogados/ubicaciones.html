@@ -15,12 +15,7 @@
         <div class="container">
             <div class="d-flex flex-row align-items-center justify-content-between topbar-content">
                 <span class="topbar-logo">Sergio Madriz Avendaño</span>
-                <!-- Botón hamburguesa solo visible en móvil -->
-                <button class="navbar-toggler d-md-none" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#mainMenu" aria-controls="mainMenu" aria-expanded="false"
-                    aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"><span></span></span>
-                </button>
+ 
                 <!-- Menú principal -->
                 <nav class="main-menu collapse d-md-flex flex-row align-items-center gap-2" id="mainMenu">
                     <a href="index.html">Inicio</a>
@@ -29,6 +24,17 @@
                     <a href="contacto.html">Contacto</a>
                     <a href="ubicaciones.html"class="active">Ubicaciones</a>
                 </nav>
+                <nav class="mobile-dropdown-menu">
+    <label for="touch"><span class="menu-icon"><i class="fas fa-bars"></i></span></label>
+    <input type="checkbox" id="touch">
+    <ul class="slide" style="right:0; left:auto;">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="quien-soy.html">Quién Soy</a></li>
+        <li><a href="areas.html">Áreas</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+        <li><a href="ubicaciones.html">Ubicaciones</a></li>
+    </ul>
+</nav>
             </div>
         </div>
     </header>
