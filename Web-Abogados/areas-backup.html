@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sergio Madriz Avendaño - Abogado</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <!-- Font Awesome para los íconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        .areas-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 32px;
+            margin-top: 32px;
+        }
+
+        .area-card {
+            background: linear-gradient(135deg, #1a2236 80%, #2e3a59 100%);
+            border-radius: 16px;
+            box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+            padding: 28px 22px 22px 22px;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            min-height: 320px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .area-card .icon {
+            font-size: 2.8em;
+            margin-bottom: 18px;
+            color: #fff;
+            background: rgba(255, 255, 255, 0.08);
+            border-radius: 12px;
+            padding: 14px;
+            display: inline-block;
+        }
+
+        .area-card h3 {
+            font-size: 1.25em;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: #ffffff;
+        }
+
+        .area-card p {
+            font-size: 1em;
+            color: #c8c8c8;
+            margin-bottom: 0;
+        }
+
+        .area-card a {
+            color: #4ec3fa;
+            text-decoration: underline;
+            font-size: 0.98em;
+            margin-top: 8px;
+            display: inline-block;
+        }
+
+        
+    </style>
+</head>
+
+<body>
+    <!-- Header de navegación superior -->
+    <header class="topbar py-2 navbar-dark" style="position:relative; z-index:3000;">
+        <div class="container">
+            <div class="d-flex flex-row align-items-center justify-content-between topbar-content">
+                <span class="topbar-logo">Sergio Madriz Avendaño</span>
+                 
+                <!-- Menú principal -->
+                <nav class="main-menu collapse d-md-flex flex-row align-items-center gap-2" id="mainMenu">
+                    <a href="index.html">Inicio</a>
+                    <a href="quien-soy.html">Quién Soy</a>
+                    <a href="areas.html" class="active" >Áreas</a>
+                    <a href="contacto.html">Contacto</a>
+                    <a href="ubicaciones.html">Ubicaciones</a>
+                </nav>
+                <nav class="mobile-dropdown-menu">
+    <label for="touch"><span class="menu-icon"><i class="fas fa-bars"></i></span></label>
+    <input type="checkbox" id="touch">
+    <ul class="slide" style="right:0; left:auto;">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="quien-soy.html">Quién Soy</a></li>
+        <li><a href="areas.html">Áreas</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+        <li><a href="ubicaciones.html">Ubicaciones</a></li>
+    </ul>
+</nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-welcome"
+        style="min-height: 80vh; display: flex; align-items: flex-start; justify-content: center;">
+        <div class="welcome-content"
+            style="background: #fff; border-radius: 18px; box-shadow: 0 4px 24px rgba(255, 255, 255, 0.08); padding: 40px 30px; max-width: 1100px; width: 100%;">
+            <h1 style="font-size:2.2em; color:#1a2236; font-weight:800; margin-bottom:10px; text-align:center;">
+                Principales áreas de práctica</h1>
+            <div class="areas-grid">
+    <div class="area-card">
+        <span class="icon"><i class="fas fa-file-signature"></i></span>
+        <h3>Trámites jurídicos</h3>
+        <p>Asesoría y gestión en procesos legales civiles, comerciales y administrativos. Te acompañamos en demandas, contratos, reclamaciones y cualquier trámite legal que requieras, garantizando seguridad y transparencia.</p>
+    </div>
+    <div class="area-card">
+        <span class="icon"><i class="fas fa-scroll"></i></span>
+        <h3>Trámites notariales</h3>
+        <p>Protocolización de documentos, escrituras públicas, constitución de sociedades, poderes, certificaciones y más. Servicio notarial ágil y confiable para tus necesidades personales y empresariales.</p>
+    </div>
+    <div class="area-card">
+        <span class="icon"><i class="fas fa-ring"></i></span>
+        <h3>Matrimonios</h3>
+        <p>Celebra tu matrimonio civil con todos los requisitos legales y acompañamiento profesional. Nos encargamos de la inscripción, protocolización y asesoría previa para que tu unión sea válida y segura.</p>
+    </div>
+    <div class="area-card">
+        <span class="icon"><i class="fas fa-hand-holding-usd"></i></span>
+        <h3>Pensiones</h3>
+        <p>Tramitación de pensiones alimentarias, revisiones, ajustes y cobros judiciales. Defendemos tus derechos y los de tu familia, buscando soluciones justas y efectivas en materia de pensiones.</p>
+    </div>
+    <div class="area-card">
+        <span class="icon"><i class="fas fa-balance-scale"></i></span>
+        <h3>Materia penal</h3>
+        <p>Defensa y representación en procesos penales. Asesoría en denuncias, querellas, audiencias y juicios, garantizando el respeto de tus derechos fundamentales en todo momento.</p>
+    </div>
+    <div class="area-card">
+        <span class="icon"><i class="fas fa-users"></i></span>
+        <h3>Materia de familia</h3>
+        <p>Soluciones legales en divorcios, guarda, régimen de visitas, adopciones y otros asuntos familiares. Atención ética y sensible para proteger a tu familia y tus intereses.</p>
+    </div>
+</div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-bar">
+            <p class="footer-copy">&copy; 2025 Sergio Madriz Avendaño - Todos los derechos reservados.</p>
+            <div class="footer-social">
+                <a href="https://wa.me/506XXXXXXXX" target="_blank" title="WhatsApp">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+                <a href="https://instagram.com/TU_USUARIO" target="_blank" title="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://facebook.com/TU_USUARIO" target="_blank" title="Facebook">
+                    <i class="fab fa-facebook"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+    <style>
+        .footer-bar {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 18px 24px 18px 24px;
+            box-sizing: border-box;
+            background: #1a2236;
+            border-top: 1px solid #ffffff;
+            /* position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 100; */
+        }
+
+        .footer-copy {
+            color: #ffffff;
+            font-size: 1em;
+            margin: 0;
+        }
+
+        .footer-social a {
+            margin: 0 8px;
+            font-size: 1.6em;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .footer-social a[title="WhatsApp"] {
+            color: #25d366;
+        }
+
+        .footer-social a[title="Instagram"] {
+            color: #e4405f;
+        }
+
+        .footer-social a[title="Facebook"] {
+            color: #1877f3;
+        }
+
+        .footer-social a:hover {
+            opacity: 0.7;
+        }
+
+        @media (max-width: 600px) {
+            .footer-bar {
+                flex-direction: column;
+                gap: 8px;
+                padding: 12px 8px;
+                text-align: center;
+                /* position: fixed;
+        bottom: 0;
+        left: 0;
+        z-index: 100; */
+            }
+
+            .footer-social {
+                margin-top: 4px;
+            }
+        }
+    </style>
+    <script src="scripts.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

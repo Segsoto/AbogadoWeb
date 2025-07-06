@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Áreas de Práctica - Sergio Madriz Avendaño - Abogado</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        /* ===== ESTILOS MODERNOS Y PROFESIONALES ===== */
+        
+        /* Variables CSS para consistencia */
+        :root {
+            --primary-color: #1a2332;
+            --secondary-color: #2c3e50;
+            --accent-color: #c9a961;
+            --accent-light: #f4e9d1;
+            --text-dark: #2c3e50;
+            --text-light: #7f8c8d;
+            --white: #ffffff;
+            --light-bg: #f8fafc;
+            --border-color: #e1e8ed;
+            --shadow-sm: 0 2px 4px rgba(0,0,0,0.08);
+            --shadow-md: 0 4px 12px rgba(0,0,0,0.1);
+            --shadow-lg: 0 8px 32px rgba(0,0,0,0.12);
+            --border-radius: 12px;
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        /* Reset y base */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background: var(--white);
+            min-height: 100vh;
+            padding-top: 80px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            width: 100%;
+        }
+        
+        /* ===== HERO SECTION ===== */
+        .hero {
+            background: linear-gradient(135deg, rgba(26,35,50,0.85) 0%, rgba(44,62,80,0.75) 100%), 
+                        url('Imagenes/DerechoCorporativo.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            min-height: 60vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><g fill="%23ffffff" fill-opacity="0.02"><polygon points="36 30 24 30 30 18"/></g></svg>');
+            opacity: 0.3;
+        }
+        
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(26,35,50,0.7) 0%, rgba(44,62,80,0.6) 100%);
+            backdrop-filter: blur(1px);
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            color: var(--white);
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255,255,255,0.1);
+            padding: 8px 16px;
+            border-radius: 50px;
+            font-size: 14px;
+            font-weight: 500;
+            margin-bottom: 24px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+        
+        .hero-content h1 {
+            font-size: clamp(2.5rem, 5vw, 3.5rem);
+            font-weight: 800;
+            margin-bottom: 20px;
+            line-height: 1.1;
+        }
+        
+        .hero-description {
+            font-size: 1.25rem;
+            opacity: 0.9;
+            margin-bottom: 40px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        /* ===== SECCIONES GENERALES ===== */
+        section {
+            padding: 80px 0;
+            width: 100%;
+        }
+        
+        .section-header {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 60px;
+            padding: 0 20px;
+        }
+        
+        .section-badge {
+            display: inline-block;
+            background: var(--accent-light);
+            color: var(--accent-color);
+            padding: 6px 16px;
+            border-radius: 50px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            margin-bottom: 16px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .section-header h2 {
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 800;
+            margin-bottom: 20px;
+            color: var(--primary-color);
+        }
+        
+        .section-description {
+            font-size: 1.125rem;
+            color: var(--text-light);
+            line-height: 1.7;
+        }
+        
+        /* ===== ÁREAS CARDS ===== */
+        .areas-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .area-card {
+            background: var(--white);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+            transition: var(--transition);
+            border: 1px solid var(--border-color);
+            position: relative;
+        }
+        
+        .area-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .area-card-image {
+            height: 200px;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+        
+        .area-card-image::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(26,35,50,0.6) 0%, rgba(44,62,80,0.4) 100%);
+        }
+        
+        .area-card-content {
+            padding: 30px;
+            position: relative;
+        }
+        
+        .area-card .icon {
+            position: absolute;
+            top: -25px;
+            left: 30px;
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, var(--accent-color), #d4af6a);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 1.2rem;
+            box-shadow: var(--shadow-sm);
+        }
+        
+        .area-card h3 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+            color: var(--primary-color);
+            margin-top: 15px;
+        }
+        
+        .area-card p {
+            color: var(--text-light);
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+        
+        .area-card-link {
+            color: var(--accent-color);
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: var(--transition);
+        }
+        
+        .area-card-link:hover {
+            color: var(--primary-color);
+        }
+        
+        /* ===== MENÚ NAVEGACIÓN ===== */
+        .topbar {
+            background: var(--primary-color);
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            box-shadow: var(--shadow-sm);
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+        
+        .topbar-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .topbar-logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--white);
+        }
+        
+        .main-menu {
+            display: flex;
+            gap: 30px;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        
+        .main-menu a {
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 500;
+            padding: 10px 20px;
+            border-radius: 8px;
+            transition: var(--transition);
+            position: relative;
+        }
+        
+        .main-menu a:hover,
+        .main-menu a.active {
+            background: rgba(255,255,255,0.1);
+            color: var(--accent-color);
+        }
+        
+        .mobile-dropdown-menu {
+            display: none;
+            position: relative;
+        }
+        
+        .mobile-dropdown-menu label {
+            color: var(--white);
+            cursor: pointer;
+            font-size: 1.2rem;
+        }
+        
+        .mobile-dropdown-menu input[type="checkbox"] {
+            display: none;
+        }
+        
+        .mobile-dropdown-menu .slide {
+            position: absolute;
+            top: 100%;
+            right: 0;
+            background: var(--primary-color);
+            min-width: 200px;
+            border-radius: 8px;
+            box-shadow: var(--shadow-lg);
+            transform: translateY(-10px);
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition);
+            list-style: none;
+            margin: 0;
+            padding: 10px 0;
+            margin-top: 10px;
+        }
+        
+        .mobile-dropdown-menu input[type="checkbox"]:checked ~ .slide {
+            transform: translateY(0);
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .mobile-dropdown-menu .slide li {
+            margin: 0;
+        }
+        
+        .mobile-dropdown-menu .slide a {
+            display: block;
+            padding: 12px 20px;
+            color: var(--white);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        
+        .mobile-dropdown-menu .slide a:hover {
+            background: rgba(255,255,255,0.1);
+            color: var(--accent-color);
+        }
+        
+        /* ===== FOOTER ===== */
+        footer {
+            background: var(--primary-color);
+            color: var(--white);
+            padding: 20px 0;
+            margin-top: auto;
+        }
+        
+        .footer-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .footer-copy {
+            margin: 0;
+            font-size: 0.9rem;
+        }
+        
+        .footer-social {
+            display: flex;
+            gap: 15px;
+        }
+        
+        .footer-social a {
+            color: var(--white);
+            font-size: 1.2rem;
+            transition: var(--transition);
+        }
+        
+        .footer-social a:hover {
+            color: var(--accent-color);
+        }
+        
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 768px) {
+            .main-menu {
+                display: none;
+            }
+            
+            .mobile-dropdown-menu {
+                display: block;
+            }
+            
+            .hero {
+                min-height: 50vh;
+                background-attachment: scroll;
+            }
+            
+            .areas-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .footer-bar {
+                flex-direction: column;
+                gap: 15px;
+                text-align: center;
+            }
+        }
+        
+        /* ===== ANIMACIONES ===== */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .fade-in-up {
+            animation: fadeInUp 0.6s ease-out;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header de navegación -->
+    <header class="topbar">
+        <div class="topbar-content">
+            <span class="topbar-logo">Sergio Madriz Avendaño</span>
+            
+            <!-- Menú principal (escritorio) -->
+            <nav class="main-menu">
+                <a href="index.html">Inicio</a>
+                <a href="quien-soy.html">Quién Soy</a>
+                <a href="areas.html" class="active">Áreas</a>
+                <a href="contacto.html">Contacto</a>
+                <a href="ubicaciones.html">Ubicaciones</a>
+            </nav>
+            
+            <!-- Menú móvil -->
+            <nav class="mobile-dropdown-menu">
+                <label for="touch"><i class="fas fa-bars"></i></label>
+                <input type="checkbox" id="touch">
+                <ul class="slide">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="quien-soy.html">Quién Soy</a></li>
+                    <li><a href="areas.html">Áreas</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                    <li><a href="ubicaciones.html">Ubicaciones</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <div class="hero-badge">
+                <i class="fas fa-gavel"></i>
+                <span>Especialidades Legales</span>
+            </div>
+            <h1>Áreas de Práctica</h1>
+            <p class="hero-description">Servicios legales especializados con más de 10 años de experiencia en diversas ramas del derecho.</p>
+        </div>
+    </section>
+
+    <!-- Sección Principal -->
+    <section style="padding: 80px 0;">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Servicios</span>
+                <h2>Nuestras Especialidades</h2>
+                <p class="section-description">
+                    Ofrecemos servicios legales integrales en múltiples áreas del derecho, 
+                    brindando soluciones efectivas y personalizadas para cada caso.
+                </p>
+            </div>
+            
+            <div class="areas-grid">
+                <div class="area-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="area-card-image" style="background-image: url('Imagenes/DerechoCorporativo.jpg')"></div>
+                    <div class="area-card-content">
+                        <div class="icon">
+                            <i class="fas fa-building"></i>
+                        </div>
+                        <h3>Derecho Corporativo</h3>
+                        <p>Asesoría integral en constitución de empresas, fusiones, adquisiciones, compliance corporativo y gobierno empresarial.</p>
+                        <a href="contacto.html" class="area-card-link">
+                            Consultar <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="area-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="area-card-image" style="background-image: url('Imagenes/DerechoFamiliar.jpg')"></div>
+                    <div class="area-card-content">
+                        <div class="icon">
+                            <i class="fas fa-home"></i>
+                        </div>
+                        <h3>Derecho Familiar</h3>
+                        <p>Mediación y representación en divorcios, custodia de menores, pensiones alimentarias y régimen de visitas.</p>
+                        <a href="contacto.html" class="area-card-link">
+                            Consultar <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="area-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="area-card-image" style="background-image: url('Imagenes/DerechoPenal.jpg')"></div>
+                    <div class="area-card-content">
+                        <div class="icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3>Derecho Penal</h3>
+                        <p>Defensa penal especializada en delitos contra la propiedad, personas y procedimientos penales complejos.</p>
+                        <a href="contacto.html" class="area-card-link">
+                            Consultar <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="area-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="area-card-image" style="background-image: url('Imagenes/DerechoTributal.jpg')"></div>
+                    <div class="area-card-content">
+                        <div class="icon">
+                            <i class="fas fa-calculator"></i>
+                        </div>
+                        <h3>Derecho Tributario</h3>
+                        <p>Asesoramiento en planificación fiscal, procedimientos tributarios y resolución de controversias con Hacienda.</p>
+                        <a href="contacto.html" class="area-card-link">
+                            Consultar <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="area-card" data-aos="fade-up" data-aos-delay="500">
+                    <div class="area-card-image" style="background-image: url('Imagenes/DerechoCorporativo.jpg')"></div>
+                    <div class="area-card-content">
+                        <div class="icon">
+                            <i class="fas fa-file-contract"></i>
+                        </div>
+                        <h3>Derecho Laboral</h3>
+                        <p>Representación en conflictos laborales, despidos, liquidaciones y asesoría en relaciones obrero-patronales.</p>
+                        <a href="contacto.html" class="area-card-link">
+                            Consultar <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="area-card" data-aos="fade-up" data-aos-delay="600">
+                    <div class="area-card-image" style="background-image: url('Imagenes/DerechoFamiliar.jpg')"></div>
+                    <div class="area-card-content">
+                        <div class="icon">
+                            <i class="fas fa-stamp"></i>
+                        </div>
+                        <h3>Servicios Notariales</h3>
+                        <p>Servicios notariales completos: escrituras, poderes, testamentos, matrimonios y trámites registrales.</p>
+                        <a href="contacto.html" class="area-card-link">
+                            Consultar <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-bar">
+            <p class="footer-copy">&copy; 2025 Sergio Madriz Avendaño - Todos los derechos reservados.</p>
+            <div class="footer-social">
+                <a href="https://wa.me/50689652370" target="_blank" title="WhatsApp">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+                <a href="#" target="_blank" title="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="#" target="_blank" title="Facebook">
+                    <i class="fab fa-facebook"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true
+        });
+    </script>
+</body>
+</html>
