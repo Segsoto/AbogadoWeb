@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{TITLE}} - Sergio Madriz Avendaño - Abogado</title>
+    <meta name="description" content="{{DESCRIPTION}}">
+    <meta name="keywords" content="abogado, notario, derecho, Costa Rica, {{KEYWORDS}}">
+    <meta name="author" content="Sergio Madriz Avendaño">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="{{TITLE}} - Sergio Madriz Avendaño">
+    <meta property="og:description" content="{{DESCRIPTION}}">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{URL}}">
+    <meta property="og:image" content="{{IMAGE}}">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{{TITLE}} - Sergio Madriz Avendaño">
+    <meta name="twitter:description" content="{{DESCRIPTION}}">
+    <meta name="twitter:image" content="{{IMAGE}}">
+    
+    <!-- Favicons -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="components/navigation.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Custom Styles -->
+    <style>
+        /* Estilos específicos de la página aquí */
+        {{CUSTOM_STYLES}}
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="navbar-container">
+            <!-- Logo -->
+            <a href="index.html" class="navbar-logo">
+                <div class="navbar-logo-icon">
+                    <i class="fas fa-balance-scale"></i>
+                </div>
+                <div class="navbar-logo-text">
+                    <span class="navbar-logo-name">Sergio Madriz</span>
+                    <span class="navbar-logo-title">Abogado & Notario</span>
+                </div>
+            </a>
+
+            <!-- Menú Principal (Desktop) -->
+            <ul class="navbar-menu">
+                <li class="navbar-menu-item">
+                    <a href="index.html" class="navbar-menu-link">
+                        <span>Inicio</span>
+                    </a>
+                </li>
+                <li class="navbar-menu-item">
+                    <a href="quien-soy.html" class="navbar-menu-link">
+                        <span>Quién Soy</span>
+                    </a>
+                </li>
+                <li class="navbar-menu-item">
+                    <a href="areas.html" class="navbar-menu-link">
+                        <span>Áreas</span>
+                    </a>
+                </li>
+                <li class="navbar-menu-item">
+                    <a href="ubicaciones.html" class="navbar-menu-link">
+                        <span>Ubicaciones</span>
+                    </a>
+                </li>
+                <li class="navbar-menu-item">
+                    <a href="contacto.html" class="navbar-menu-link">
+                        <span>Contacto</span>
+                    </a>
+                </li>
+            </ul>
+
+            <!-- Botón de Menú Móvil -->
+            <button class="navbar-toggle" aria-label="Abrir menú de navegación">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Menú Lateral Móvil -->
+    <div class="mobile-menu-overlay"></div>
+    <div class="mobile-menu">
+        <div class="mobile-menu-header">
+            <span class="mobile-menu-logo">Sergio Madriz</span>
+            <button class="mobile-menu-close" aria-label="Cerrar menú">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        
+        <nav class="mobile-menu-nav">
+            <ul class="mobile-menu-list">
+                <li class="mobile-menu-item">
+                    <a href="index.html" class="mobile-menu-link">
+                        <i class="fas fa-home mobile-menu-icon"></i>
+                        <span>Inicio</span>
+                    </a>
+                </li>
+                <li class="mobile-menu-item">
+                    <a href="quien-soy.html" class="mobile-menu-link">
+                        <i class="fas fa-user-tie mobile-menu-icon"></i>
+                        <span>Quién Soy</span>
+                    </a>
+                </li>
+                <li class="mobile-menu-item">
+                    <a href="areas.html" class="mobile-menu-link">
+                        <i class="fas fa-briefcase mobile-menu-icon"></i>
+                        <span>Áreas de Práctica</span>
+                    </a>
+                </li>
+                <li class="mobile-menu-item">
+                    <a href="ubicaciones.html" class="mobile-menu-link">
+                        <i class="fas fa-map-marker-alt mobile-menu-icon"></i>
+                        <span>Ubicaciones</span>
+                    </a>
+                </li>
+                <li class="mobile-menu-item">
+                    <a href="contacto.html" class="mobile-menu-link">
+                        <i class="fas fa-envelope mobile-menu-icon"></i>
+                        <span>Contacto</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- Main Content -->
+    <main>
+        {{CONTENT}}
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-main">
+            <div class="footer-container">
+                <div class="footer-grid">
+                    <!-- Información del Abogado -->
+                    <div class="footer-section">
+                        <h3>Sergio Madriz Avendaño</h3>
+                        <p>Abogado y Notario comprometido con la excelencia legal y el servicio personalizado. Brindamos asesoría jurídica integral con más de 10 años de experiencia.</p>
+                        
+                        <!-- Redes Sociales -->
+                        <div class="footer-social">
+                            <a href="https://wa.me/50689652370" target="_blank" rel="noopener noreferrer" 
+                               class="footer-social-link" title="WhatsApp">
+                                <i class="fab fa-whatsapp"></i>
+                            </a>
+                            <a href="#" target="_blank" rel="noopener noreferrer" 
+                               class="footer-social-link" title="Facebook">
+                                <i class="fab fa-facebook"></i>
+                            </a>
+                            <a href="#" target="_blank" rel="noopener noreferrer" 
+                               class="footer-social-link" title="Instagram">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="#" target="_blank" rel="noopener noreferrer" 
+                               class="footer-social-link" title="LinkedIn">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Información de Contacto -->
+                    <div class="footer-section">
+                        <h3>Contacto</h3>
+                        
+                        <div class="footer-contact-item">
+                            <div class="footer-contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div>
+                                <a href="tel:+50689652370">+506 8965-2370</a>
+                            </div>
+                        </div>
+                        
+                        <div class="footer-contact-item">
+                            <div class="footer-contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div>
+                                <a href="mailto:contacto@sergiomadriz.com">contacto@sergiomadriz.com</a>
+                            </div>
+                        </div>
+                        
+                        <div class="footer-contact-item">
+                            <div class="footer-contact-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div>
+                                <span>Lunes a Viernes<br>8:00 AM - 6:00 PM</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Áreas de Práctica -->
+                    <div class="footer-section">
+                        <h3>Áreas de Práctica</h3>
+                        <ul style="list-style: none; padding: 0; margin: 0;">
+                            <li style="margin-bottom: 8px;">
+                                <a href="areas.html#derecho-penal">Derecho Penal</a>
+                            </li>
+                            <li style="margin-bottom: 8px;">
+                                <a href="areas.html#derecho-familiar">Derecho Familiar</a>
+                            </li>
+                            <li style="margin-bottom: 8px;">
+                                <a href="areas.html#derecho-corporativo">Derecho Corporativo</a>
+                            </li>
+                            <li style="margin-bottom: 8px;">
+                                <a href="areas.html#derecho-tributario">Derecho Tributario</a>
+                            </li>
+                            <li style="margin-bottom: 8px;">
+                                <a href="areas.html">Ver todas las áreas</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Enlaces Rápidos -->
+                    <div class="footer-section">
+                        <h3>Enlaces Rápidos</h3>
+                        <ul style="list-style: none; padding: 0; margin: 0;">
+                            <li style="margin-bottom: 8px;">
+                                <a href="index.html">Inicio</a>
+                            </li>
+                            <li style="margin-bottom: 8px;">
+                                <a href="quien-soy.html">Quién Soy</a>
+                            </li>
+                            <li style="margin-bottom: 8px;">
+                                <a href="areas.html">Áreas de Práctica</a>
+                            </li>
+                            <li style="margin-bottom: 8px;">
+                                <a href="ubicaciones.html">Ubicaciones</a>
+                            </li>
+                            <li style="margin-bottom: 8px;">
+                                <a href="contacto.html">Contacto</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer Bottom -->
+        <div class="footer-bottom">
+            <div class="footer-container">
+                <p>&copy; 2025 Sergio Madriz Avendaño - Todos los derechos reservados. | 
+                   <a href="#" style="color: inherit;">Política de Privacidad</a> | 
+                   <a href="#" style="color: inherit;">Términos de Servicio</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="components/navigation.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Inicializar AOS
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true,
+            offset: 100
+        });
+
+        // Scripts específicos de la página
+        {{CUSTOM_SCRIPTS}}
+    </script>
+</body>
+</html>
