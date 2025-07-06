@@ -1,10 +1,13 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es-CR">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Quién Soy - Sergio Madriz Avendaño - Abogado</title>
+  <title>Quién Soy - Sergio Madriz Avendaño | Abogado y Notario en La Guácima</title>
+  <meta name="description" content="Conoce a Sergio Madriz Avendaño, abogado y notario en La Guácima, Alajuela. Más de 10 años de experiencia en servicios legales integrales en Costa Rica.">
+  <meta name="keywords" content="Sergio Madriz, abogado La Guácima, notario Alajuela, experiencia legal Costa Rica">
+  <link rel="canonical" href="https://abogado-web-lo6j.vercel.app/quien-soy.html">
   <link rel="stylesheet" href="components/navigation.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <!-- AOS Animation Library -->
@@ -19,7 +22,7 @@
     /* Hero Section */
     .hero {
         background: linear-gradient(135deg, rgba(26,35,50,0.85) 0%, rgba(44,62,80,0.75) 100%), 
-                    url('Imagenes/sergio-madriz.jpg');
+                    url('Imagenes/foto-abogados.jpg');
         background-size: cover;
         background-position: center;
         background-attachment: fixed;
@@ -228,6 +231,112 @@
             grid-template-columns: 1fr;
             gap: 20px;
         }
+        
+        .professional-profile {
+            flex-direction: column;
+            text-align: center;
+            gap: 40px;
+        }
+        
+        .profile-image {
+            max-width: 300px;
+            margin: 0 auto;
+        }
+    }
+    
+    /* Sección del Retrato Profesional */
+    .professional-profile {
+        display: flex;
+        align-items: center;
+        gap: 60px;
+        margin-bottom: 60px;
+    }
+    
+    .profile-image {
+        flex: 0 0 350px;
+        position: relative;
+    }
+    
+    .profile-image img {
+        width: 100%;
+        height: 450px;
+        object-fit: cover;
+        border-radius: 20px;
+        box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        transition: transform 0.3s ease;
+    }
+    
+    .profile-image:hover img {
+        transform: scale(1.02);
+    }
+    
+    .profile-image::after {
+        content: '';
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        right: -20px;
+        bottom: -20px;
+        background: var(--accent-color);
+        border-radius: 20px;
+        z-index: -1;
+        opacity: 0.1;
+    }
+    
+    .profile-content {
+        flex: 1;
+    }
+    
+    .profile-content .section-badge {
+        margin-bottom: 20px;
+    }
+    
+    .profile-content h2 {
+        font-size: 2.5rem;
+        font-weight: 800;
+        color: var(--primary-color);
+        margin-bottom: 20px;
+        line-height: 1.2;
+    }
+    
+    .profile-content .subtitle {
+        font-size: 1.25rem;
+        color: var(--accent-color);
+        font-weight: 600;
+        margin-bottom: 24px;
+    }
+    
+    .profile-content p {
+        font-size: 1.125rem;
+        line-height: 1.7;
+        color: var(--text-light);
+        margin-bottom: 24px;
+    }
+    
+    .profile-stats {
+        display: flex;
+        gap: 40px;
+        margin-top: 30px;
+    }
+    
+    .stat-item {
+        text-align: center;
+    }
+    
+    .stat-number {
+        font-size: 2rem;
+        font-weight: 800;
+        color: var(--accent-color);
+        display: block;
+        margin-bottom: 8px;
+    }
+    
+    .stat-label {
+        font-size: 0.9rem;
+        color: var(--text-light);
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
     }
     
     /* Animaciones */
@@ -353,8 +462,44 @@
         <i class="fas fa-user-tie"></i>
         <span>Perfil Profesional</span>
       </div>
-      <h1>Sergio Madriz Avendaño<br><span class="hero-subtitle">Abogado & Notario</span></h1>
-      <p class="hero-description">Abogado con vocación de servicio, años de experiencia en el ejercicio del derecho y un firme compromiso con la justicia.</p>
+      <h1>Sergio Madriz Avendaño<br><span class="hero-subtitle">Abogado & Notario en La Guácima</span></h1>
+      <p class="hero-description">Abogado con vocación de servicio, años de experiencia en el ejercicio del derecho en Costa Rica y un firme compromiso con la justicia en La Guácima, Alajuela.</p>
+    </div>
+  </section>
+
+  <!-- Sección del Retrato Profesional -->
+  <section style="background: var(--white); padding: 80px 0;">
+    <div class="container">
+      <div class="professional-profile" data-aos="fade-up">
+        <div class="profile-image">
+          <img src="Imagenes/sergio-madriz.jpg" alt="Sergio Madriz Avendaño - Abogado y Notario en La Guácima, Alajuela">
+        </div>
+        <div class="profile-content">
+          <span class="section-badge">Conóceme</span>
+          <h2>Sergio Madriz Avendaño</h2>
+          <div class="subtitle">Abogado y Notario Público</div>
+          <p>
+            Con más de una década de experiencia en el ejercicio del derecho, me he especializado en brindar servicios legales integrales con un enfoque personalizado y profesional. Mi compromiso es ofrecer soluciones jurídicas efectivas adaptadas a las necesidades específicas de cada cliente.
+          </p>
+          <p>
+            Graduado en Derecho con especialización en diversas áreas del derecho costarricense, mantengo un enfoque ético y transparente en cada caso que manejo. Mi experiencia abarca desde el derecho de familia hasta el derecho corporativo, siempre con el objetivo de proteger los derechos e intereses de mis clientes.
+          </p>
+          <div class="profile-stats">
+            <div class="stat-item">
+              <span class="stat-number">10+</span>
+              <span class="stat-label">Años de Experiencia</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">500+</span>
+              <span class="stat-label">Casos Exitosos</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">100%</span>
+              <span class="stat-label">Confidencialidad</span>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -448,7 +593,7 @@
             
             <!-- Redes Sociales -->
             <div class="footer-social">
-              <a href="https://wa.me/50689652370" target="_blank" rel="noopener noreferrer" 
+              <a href="https://wa.me/50683326747" target="_blank" rel="noopener noreferrer" 
                  class="footer-social-link" title="WhatsApp">
                 <i class="fab fa-whatsapp"></i>
               </a>
@@ -476,7 +621,7 @@
                 <i class="fas fa-phone"></i>
               </div>
               <div>
-                <a href="tel:+50689652370">+506 8965-2370</a>
+                <a href="tel:+50683326747">+506 8332-6747</a>
               </div>
             </div>
             
@@ -485,7 +630,7 @@
                 <i class="fas fa-envelope"></i>
               </div>
               <div>
-                <a href="mailto:contacto@sergiomadriz.com">contacto@sergiomadriz.com</a>
+                <a href="mailto:contacto.abogadoslaguacima@gmail.com">contacto.abogadoslaguacima@gmail.com</a>
               </div>
             </div>
             
