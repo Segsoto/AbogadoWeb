@@ -410,11 +410,44 @@ body {
         display: block;
     }
     
-    .navbar-logo-text {
-        display: none;
+    .navbar-container {
+        justify-content: space-between; /* Logo a la izquierda, hamburger a la derecha */
+        padding: 0 20px;
     }
     
     .navbar-logo {
+        font-size: 1.1rem; /* Reducir ligeramente el tamaño pero mantener visible */
+        flex-shrink: 0; /* Prevenir que se achique */
+        display: flex; /* Asegurar que se mantenga como flex */
+        align-items: center;
+        gap: 10px; /* Reducir el gap en móvil */
+    }
+    
+    .navbar-logo-text {
+        display: flex; /* Mantener visible en móvil */
+        flex-direction: column;
+        line-height: 1.1;
+    }
+    
+    .navbar-logo-name {
+        font-size: 1rem; /* Ajustar tamaño para móvil */
+        font-weight: 700;
+    }
+    
+    .navbar-logo-title {
+        font-size: 0.75rem; /* Ajustar tamaño del subtítulo */
+        opacity: 0.9;
+    }
+    
+    .navbar-logo-icon {
+        width: 35px; /* Reducir tamaño del ícono */
+        height: 35px;
+        font-size: 1rem;
+        border-radius: 6px; /* Ajustar border-radius proporcionalmente */
+    }
+    
+    .navbar-toggle {
+        padding: 8px;
         font-size: 1.2rem;
     }
     
@@ -431,6 +464,26 @@ body {
 @media (max-width: 480px) {
     .navbar-container {
         padding: 0 15px;
+        height: 70px; /* Reducir altura en pantallas muy pequeñas */
+    }
+    
+    .navbar-logo {
+        font-size: 1rem; /* Reducir más en pantallas muy pequeñas */
+        gap: 8px; /* Reducir espacio entre ícono y texto */
+    }
+    
+    .navbar-logo-name {
+        font-size: 0.9rem;
+    }
+    
+    .navbar-logo-title {
+        font-size: 0.7rem;
+    }
+    
+    .navbar-logo-icon {
+        width: 30px;
+        height: 30px;
+        font-size: 0.9rem;
     }
     
     .mobile-menu {
@@ -440,6 +493,11 @@ body {
     
     .footer-container {
         padding: 0 15px;
+    }
+    
+    /* Ajustar padding del body para la nueva altura del navbar */
+    body {
+        padding-top: 70px;
     }
 }
 
