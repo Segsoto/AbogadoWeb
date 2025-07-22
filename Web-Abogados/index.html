@@ -224,6 +224,14 @@
         border: 1px solid rgba(255,255,255,0.2);
     }
     
+    .hero-badge-mobile {
+        display: none;
+    }
+    
+    .hero-badge-full {
+        display: inline;
+    }
+    
     .hero-content h1 {
         font-size: clamp(2.5rem, 5vw, 4rem);
         font-weight: 800;
@@ -748,6 +756,14 @@
     }
     
     @media (max-width: 768px) {
+        .hero-badge-full {
+            display: none;
+        }
+        
+        .hero-badge-mobile {
+            display: inline;
+        }
+        
         .container {
             padding: 0 20px;
         }
@@ -756,22 +772,54 @@
             padding: 0 20px;
         }
         
+        /* Simplificar hero badge en móviles */
+        .hero-badge span {
+            font-size: 12px;
+        }
+        
+        .hero-badge {
+            padding: 6px 12px;
+            margin-bottom: 20px;
+        }
+        
+        /* Optimizar título H1 para móviles */
+        .hero-content h1 {
+            font-size: clamp(1.8rem, 6vw, 2.5rem);
+            line-height: 1.2;
+            margin-bottom: 16px;
+        }
+        
+        .hero-subtitle {
+            font-size: 0.8em;
+        }
+        
+        /* Reducir descripción en móviles */
+        .hero-description {
+            font-size: 1rem;
+            margin-bottom: 30px;
+            line-height: 1.5;
+        }
+        
         .hero-stats {
-            gap: 30px;
+            gap: 20px;
             flex-wrap: wrap;
             justify-content: center;
+            margin-top: 30px;
         }
         
         .hero-buttons {
             flex-direction: column;
             align-items: center;
-            gap: 16px;
+            gap: 12px;
+            margin-bottom: 40px;
         }
         
         .hero-btn {
             width: 100%;
-            max-width: 280px;
+            max-width: 260px;
             justify-content: center;
+            padding: 14px 24px;
+            font-size: 1rem;
         }
         
         .services-grid {
@@ -995,7 +1043,8 @@
         <div class="hero-content">
             <div class="hero-badge">
                 <i class="fas fa-balance-scale"></i>
-                <span>Abogado & Notario Certificado en La Guácima</span>
+                <span class="hero-badge-full">Abogado & Notario Certificado en La Guácima</span>
+                <span class="hero-badge-mobile">Abogado & Notario</span>
             </div>
             <h1>Abogado y Notario en La Guácima – Sergio Madriz<br><span class="hero-subtitle">Tu aliado legal en Costa Rica</span></h1>
             <p class="hero-description">Abogado y notario en La Guácima, Alajuela, con más de 10 años de experiencia brindando servicios legales integrales en Costa Rica. Ética, profesionalismo y resultados efectivos para empresas y personas.</p>
