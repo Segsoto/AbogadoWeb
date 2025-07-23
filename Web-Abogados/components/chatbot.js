@@ -123,8 +123,8 @@ class LegalChatbot {
                 "⏰ Horario: Lunes a Viernes, 8:00 AM - 6:00 PM",
                 "📱 WhatsApp: +506 8332-6747",
                 "📧 Email: contacto.abogadoslaguacima@gmail.com"
-            ]
-        };,
+            ],
+            
             urgency_keywords: ['urgente', 'emergencia', 'inmediato', 'hoy', 'ahora', 'rápido', 'pronto'],
             legal_keywords: ['demanda', 'juicio', 'tribunal', 'juzgado', 'sentencia', 'apelación', 'recurso']
         };
